@@ -21,16 +21,8 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    /**
-     *单个商品查询
-     * @param productId
-     * @return
-     */
-    @Override
-    public ProductInfo findOne(String productId) {
-        return productRepository.findOne(productId);
-    }
-
+    //============================卖家端===========================
+    
     /**
      * 商品列表查询
      * @return
@@ -60,5 +52,16 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductInfo> findByProductStatus(Integer productStatus) {
         return productRepository.findByProductStatus(productStatus);
+    }
+    //=========================买家端======================
+
+    /**
+     *单个商品查询
+     * @param productId
+     * @return
+     */
+    @Override
+    public ProductInfo findOne(String productId) {
+        return productRepository.findOne(productId);
     }
 }
