@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * Administrator
- * 2018/11/14 0014
+ * 2018/11/16 0014
  *
  */
 @Table(name = "product_info")
