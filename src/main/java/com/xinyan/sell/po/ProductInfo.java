@@ -1,5 +1,7 @@
 package com.xinyan.sell.po;
 
+import com.xinyan.sell.enums.PayStatus;
+import com.xinyan.sell.enums.ProductStatus;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -12,7 +14,7 @@ import java.util.Date;
 
 /**
  * Administrator
- * 2018/11/14 0014
+ * 2018/11/16 0014
  *
  */
 @Table(name = "product_info")
@@ -46,7 +48,7 @@ public class ProductInfo {
 
 
     /** 商品状态，0正常，1下架 */
-    private Integer productStatus = 0;
+    private Integer productStatus = ProductStatus.UP.getCode();
 
 
     /** 类目编号 */

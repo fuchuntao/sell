@@ -4,18 +4,21 @@ import lombok.Getter;
 
 /**
  * Administrator
- * 2018/11/15 0015
- * 商品状态枚举类
+ * 2018/11/16 0016
+ * 订单状态枚举类
  */
 @Getter
-public enum ProductStatus {
-    UP(0,"上架"),
-    DOWN(1, "下架")
+public enum OrderStatus {
+    NEW(0, "新订单"),
+    FINISH(1, "已完结订单"),
+    CANCEL(2, "取消订单")
     ;
+
+
     private Integer code;
     private String message;
 
-    ProductStatus(Integer code, String message) {
+    OrderStatus(Integer code, String message) {
         this.code = code;
         this.message = message;
     }
