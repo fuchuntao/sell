@@ -4,7 +4,7 @@ import java.util.UUID;
 
 /**
  * Administrator
- * 2018/11/14 0014
+ * 2018/11/16 0014
  * 生成主键key
  */
 public class KeyUtil {
