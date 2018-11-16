@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+    <!-- 控制台日志 -->
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>
@@ -7,7 +8,8 @@
             </pattern>
         </layout>
     </appender>
-    <!--info日志-->
+
+    <!-- info 日志 -->
     <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>
@@ -23,7 +25,8 @@
             <fileNamePattern>/sell/info.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
-    <!--error日志-->
+
+    <!-- error 日志 -->
     <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
@@ -37,9 +40,11 @@
             <fileNamePattern>/sell/error.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
+
     <root level="info">
         <appender-ref ref="consoleLog"/>
         <appender-ref ref="fileInfoLog"/>
         <appender-ref ref="fileErrorLog"/>
     </root>
+
 </configuration>

@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * ProductCategoryRepositoryTest接口单元测试
  */
@@ -34,8 +37,8 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void saveTest() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("男生最爱");
-        productCategory.setCategoryType(2);
+        productCategory.setCategoryName("女神最爱");
+        productCategory.setCategoryType(4);
         ProductCategory result = productCategoryRepository.save(productCategory);
         Assert.assertNotEquals(null, result);
 
@@ -43,6 +46,28 @@ public class ProductCategoryRepositoryTest {
 
     }
 
+    /**
+     * 根据多个类目查询
+     */
+    @Test
+    public void findByCategoryTypeIn() {
+        List<ProductCategory> categoryTypeIn = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(10, 2, 3));
+        Assert.assertNotNull("根据多个类目查询", categoryTypeIn);
 
+    }
 
+    /**
+     * 修改测试
+     */
+    @Test
+    public void updateTest() {
+        //查询
+        ProductCategory repositoryOne = productCategoryRepository.findOne(5);
+        //修改
+        repositoryOne.setCategoryName("女孩最爱");
+        //保存
+        ProductCategory productCategory = productCategoryRepository.save(repositoryOne);
+        Assert.assertNotNull("null", productCategory);
+
+    }
 }
