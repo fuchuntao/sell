@@ -11,16 +11,13 @@ import java.util.Date;
 
 /**
  * OrderDetail 数据持久化对象
- *
- *
  * (@Entity)会根据类名跟数据库表（相同的表名）进行关联(自动清除下划线，进行类名拼接)，
  *          如果不相同则使用table(name = "OrderDetail(数据库表名)")进行关联
- *
- *
  *   (@DynamicUpdate) 动态更新
  *   (@Entity) 和数据库表进行映射
  *   (@Data) 自动生成 Getter,Setter,toString
  * @author 莫言
+ * @date 2018/11/16
  */
 
 
