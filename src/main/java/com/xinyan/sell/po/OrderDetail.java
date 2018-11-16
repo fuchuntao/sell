@@ -27,10 +27,19 @@ import java.util.Date;
 public class OrderDetail {
 
     @Id
+    /**
+     * 订单详情id
+     */
     private String detailId;
 
+    /**
+     * 订单id
+     */
     private String orderId;
 
+    /**
+     * 商品id
+     */
     private String productId;
 
     /**

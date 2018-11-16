@@ -1,5 +1,7 @@
 package com.xinyan.sell.po;
 
+import com.xinyan.sell.enums.OrderStatus;
+import com.xinyan.sell.enums.PayStatus;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -23,6 +25,9 @@ import java.util.Date;
 public class OrderMaster {
 
     @Id
+    /**
+     * 订单id
+     */
     private String orderId;
 
     /**卖家名字*/
@@ -41,10 +46,10 @@ public class OrderMaster {
     private BigDecimal orderAmount;
 
     /**订单状态 默认为下单状态*/
-    private Integer orderStatus;
+    private Integer orderStatus = OrderStatus.NEW.getCode();
 
     /**支付状态 默认支付状态*/
-    private Integer payStatus;
+    private Integer payStatus = PayStatus.PAID.getCode();
 
     /**创建时间*/
     private Date createTime;

@@ -61,6 +61,7 @@ public class ProductCategoryRepositoryTest {
      */
     @Test
     public void updateTest() {
+
         //查询
         ProductCategory repositoryOne = productCategoryRepository.findOne(5);
         //修改
@@ -70,4 +71,6 @@ public class ProductCategoryRepositoryTest {
         Assert.assertNotNull("null", productCategory);
 
     }
+
+
 }
