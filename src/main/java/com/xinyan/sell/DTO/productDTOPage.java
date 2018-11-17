@@ -1,16 +1,17 @@
-package com.xinyan.sell.vo;
+package com.xinyan.sell.DTO;
 
+import com.xinyan.sell.po.ProductInfo;
 import lombok.Data;
+import org.springframework.data.domain.Page;
 
 import java.math.BigDecimal;
 
 /**
- * 卖家端商品信息视图
  * Administrator
- * 2018/11/16 0016
+ * 2018/11/17 0017
  */
 @Data
-public class SellerProductInfoVO {
+public class productDTOPage {
 
     private String productId;
 
@@ -24,7 +25,8 @@ public class SellerProductInfoVO {
 
     private Integer categoryType;
 
-//    private int pageNumber;
-//
-//    private int pageSize;
+    private int pageNumber;
+
+    private int size;
+
 }
