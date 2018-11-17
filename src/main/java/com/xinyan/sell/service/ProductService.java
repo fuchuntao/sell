@@ -1,5 +1,6 @@
 package com.xinyan.sell.service;
 
+import com.xinyan.sell.dto.CartDTO;
 import com.xinyan.sell.po.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -38,5 +39,12 @@ public interface ProductService {
      * @return
      */
     public List<ProductInfo> findByProductStatus(Integer productStatus);
+
+    /**
+     * 更新商品库存
+     * @param cartDTOList
+     */
+    public void decreaseStock(List<CartDTO> cartDTOList);
+
 
 }

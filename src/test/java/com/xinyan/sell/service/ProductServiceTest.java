@@ -61,4 +61,7 @@ public class ProductServiceTest {
 
     }
 
+    @Test
+    public void decreaseStock() {
+    }
 }
