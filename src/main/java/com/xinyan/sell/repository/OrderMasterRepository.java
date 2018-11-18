@@ -21,4 +21,5 @@ public interface OrderMasterRepository extends JpaRepository<OrderMaster, String
      */
     Page<OrderMaster> findByBuyerOpenid(String buyerOpenId, Pageable pageable);
 
+
 }

@@ -2,8 +2,8 @@ package com.xinyan.sell.service;
 
 import com.xinyan.sell.dto.OrderDTO;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
 
 /**
  * Administrator
@@ -51,7 +51,13 @@ public interface OrderService {
      */
     OrderDTO paid(OrderDTO orderDTO);
 
+    //===========================卖家端===================================
 
+    /**
+     * 卖家订单列表
+     * @return
+     */
+    Page<OrderDTO> list(Pageable pageable);
 
 
 

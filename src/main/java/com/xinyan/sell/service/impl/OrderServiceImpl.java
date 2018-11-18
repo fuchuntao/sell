@@ -1,5 +1,6 @@
 package com.xinyan.sell.service.impl;
 
+import com.xinyan.sell.converter.OrderMasterToOrderDTOConverter;
 import com.xinyan.sell.dto.CartDTO;
 import com.xinyan.sell.dto.OrderDTO;
 import com.xinyan.sell.enums.ResultStatus;
@@ -9,7 +10,6 @@ import com.xinyan.sell.po.OrderMaster;
 import com.xinyan.sell.po.ProductInfo;
 import com.xinyan.sell.repository.OrderDetailRepository;
 import com.xinyan.sell.repository.OrderMasterRepository;
-import com.xinyan.sell.repository.ProductCategoryRepository;
 import com.xinyan.sell.repository.ProductRepository;
 import com.xinyan.sell.service.OrderService;
 import com.xinyan.sell.service.ProductService;
@@ -18,11 +18,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,6 +48,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private ProductService productService;
 
+    //===========================买家端===================================
     /**
      * 创建订单
      * @param orderDTO
@@ -143,4 +145,25 @@ public class OrderServiceImpl implements OrderService {
     public OrderDTO paid(OrderDTO orderDTO) {
         return null;
     }
+
+
+
+
+    //===========================卖家端===================================
+
+    /**
+     * 卖家订单列表
+     * @param pageable
+     * @return
+     */
+    public Page<OrderDTO> list(Pageable pageable) {
+        Page<OrderMaster> orderMasterPage = orderMasterRepository.findAll(pageable);
+        List<OrderDTO> orderDTOList = OrderMasterToOrderDTOConverter.converter(orderMasterPage.getContent());
+        Page<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList,pageable,orderMasterPage.getTotalElements());
+
+        return orderDTOPage;
+    }
+
+
+
 }
