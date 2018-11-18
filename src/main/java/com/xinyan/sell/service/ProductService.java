@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Administrator
  * 2018/11/14 0014
+ * 商品列表业务接口
  */
 public interface ProductService {
 
@@ -41,10 +42,15 @@ public interface ProductService {
     public List<ProductInfo> findByProductStatus(Integer productStatus);
 
     /**
-     * 更新商品库存
+     * 减少商品库存
      * @param cartDTOList
      */
     public void decreaseStock(List<CartDTO> cartDTOList);
 
+    /**
+     * 取消订单增加商品库存
+     * @param cartDTOList
+     */
+    public void increaseStock(List<CartDTO> cartDTOList);
 
 }

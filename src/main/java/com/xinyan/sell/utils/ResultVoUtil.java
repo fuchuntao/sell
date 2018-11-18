@@ -6,6 +6,7 @@ import lombok.Getter;
 /**
  * Administrator
  * 2018/11/16 0016
+ * 返回VO对象工具类
  */
 @Getter
 public class ResultVoUtil {

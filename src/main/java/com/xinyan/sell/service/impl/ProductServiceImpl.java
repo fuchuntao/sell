@@ -18,6 +18,7 @@ import java.util.List;
 /**
  * Administrator
  * 2018/11/15 0015
+ * 商品列表业务接口实现类
  */
 @Slf4j
 @Service
@@ -67,8 +68,10 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findByProductStatus(productStatus);
     }
 
+
+
     /**
-     * 更新库存
+     * 减少库存
      * @param cartDTOList
      */
     @Override
@@ -79,14 +82,14 @@ public class ProductServiceImpl implements ProductService {
             //判断商品是否存在
             ProductInfo productInfo = productRepository.findOne(cartDTO.getProductId());
             if(productInfo == null) {
-                log.info("【更新库存】商品不存在，ProductId : {}", cartDTO.getProductId());
+                log.info("【减少库存】商品不存在，ProductId : {}", cartDTO.getProductId());
                 throw new SellException(ResultStatus.PRODUCT_NOT__EXIST);
             }
 
             //判断库存是否足够
             Integer quantity = productInfo.getProductStock() - cartDTO.getProductQuantity();
             if(quantity == null) {
-                log.info("【更新库存】商品库存不足, ProductStock : {}", productInfo.getProductStock());
+                log.info("【减少库存】商品库存不足, ProductStock : {}", productInfo.getProductStock());
                 throw new SellException(ResultStatus.PRODUCT_STOCK_ERROR);
             }
             //设置productInfo对象的库存
@@ -96,5 +99,27 @@ public class ProductServiceImpl implements ProductService {
 
         }
 
+    }
+
+    /**
+     * 取消订单增加库存
+     * @param cartDTOList
+     */
+    @Override
+    public void increaseStock(List<CartDTO> cartDTOList) {
+        for(CartDTO cartDTO : cartDTOList) {
+            //判断上商品是否存在
+            ProductInfo productInfo = productRepository.findOne(cartDTO.getProductId());
+            if(productInfo == null) {
+                log.info("【增加库存】商品不存在, productInfo: {}", cartDTO.getProductId());
+                throw new SellException(ResultStatus.PRODUCT_NOT__EXIST);
+            }
+            //库存的修改
+            Integer productStock = productInfo.getProductStock() + cartDTO.getProductQuantity();
+            //设置库存
+            productInfo.setProductStock(productStock);
+            //保存到数据库中
+            productRepository.save(productInfo);
+        }
     }
 }

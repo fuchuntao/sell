@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * Administrator
  * 2018/11/17 0017
- *
+ * 异常提示信息枚举类
  */
 @Getter
 public enum  ResultStatus {

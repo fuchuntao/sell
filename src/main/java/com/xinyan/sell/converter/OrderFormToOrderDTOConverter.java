@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Administrator
  * 2018/11/17 0017
- * 转换类
+ * OrderFormToOrderDTO转换类
  */
 @Slf4j
 public class OrderFormToOrderDTOConverter {

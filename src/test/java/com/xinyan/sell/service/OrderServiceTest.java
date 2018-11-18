@@ -10,6 +10,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+/**
+ * OrderService业务接口单元测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class OrderServiceTest {

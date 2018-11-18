@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 /**
  * Administrator
  * 2018/11/18 0018
+ * OrderMasterToOrderDTO转换类
  */
 public class OrderMasterToOrderDTOConverter {
 
@@ -24,7 +25,6 @@ public class OrderMasterToOrderDTOConverter {
         OrderDTO orderDTO = new OrderDTO();
         BeanUtils.copyProperties(orderMaster, orderDTO);
         return orderDTO;
-
 
     }
 

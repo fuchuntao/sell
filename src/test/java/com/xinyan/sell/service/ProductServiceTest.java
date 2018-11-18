@@ -14,6 +14,9 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * ProductService业务接口单元测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductServiceTest {

@@ -11,9 +11,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 import static org.junit.Assert.*;
+
+/**
+ * OrderDetailRepository接口单元测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class OrderDetailRepositoryTest {
+
     @Autowired
     private OrderDetailRepository orderDetailRepository;
 
