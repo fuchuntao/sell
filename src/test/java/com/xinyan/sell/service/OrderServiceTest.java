@@ -39,9 +39,10 @@ public class OrderServiceTest {
     }
 
     @Test
-    public void cancel() {
-
-
+    public void cancelTest() {
+        OrderDTO orderDTO = orderService.findOne("123");
+        OrderDTO cancel = orderService.cancel(orderDTO);
+        Assert.assertNotNull(cancel);
     }
 
     @Test
@@ -54,8 +55,15 @@ public class OrderServiceTest {
 
     @Test
     public void listTest(){
-        PageRequest pageRequest = new PageRequest(0,2);
+        PageRequest pageRequest = new PageRequest(0,5);
         Page<OrderDTO> orderDTOPage = orderService.list(pageRequest);
         Assert.assertNotNull(orderDTOPage);
+    }
+
+    @Test
+    public void  finishTest(){
+        OrderDTO orderDTO = orderService.findOne("123");
+        OrderDTO cancel = orderService.finish(orderDTO);
+        Assert.assertNotNull(cancel);
     }
 }
