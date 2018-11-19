@@ -12,6 +12,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface OrderMasterRepository extends JpaRepository<OrderMaster, String> {
 
-
+    /**
+     * 订单详情
+     * @param orderId
+     * @return
+     */
+    OrderDetail findByOrderId(String orderId);
 
 }
