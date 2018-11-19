@@ -237,10 +237,35 @@ public class OrderServiceImpl implements OrderService {
         Page<OrderMaster> orderMasterPage = orderMasterRepository.findAll(pageable);
         List<OrderDTO> orderDTOList = OrderMasterToOrderDTOConverter.converter(orderMasterPage.getContent());
         Page<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList,pageable,orderMasterPage.getTotalElements());
-
         return orderDTOPage;
     }
 
 
+    //取消订单与买家相同
 
+    /**
+     * 完结订单
+     *
+     * @param orderDTO
+     * @return
+     */
+    @Override
+    public OrderDTO finish(OrderDTO orderDTO) {
+        //判断订单状态
+        if(!orderDTO.getOrderStatus().equals(OrderStatus.NEW.getCode())) {
+            log.info("【完结订单】订单状态不是新订单，orderId:{}, orderStatus:{}",
+                    orderDTO.getOrderId(), orderDTO.getOrderStatus());
+            throw new SellException(ResultStatus.ORDER_STATUS_ERROR);
+        }
+        //修改订单状态
+        orderDTO.setOrderStatus(OrderStatus.FINISH.getCode());
+        OrderMaster orderMaster = new OrderMaster();
+        BeanUtils.copyProperties(orderDTO, orderMaster);
+        OrderMaster master = orderMasterRepository.save(orderMaster);
+        if(master == null) {
+            log.info("【完结订单】修改订单状态出错, orderMaster : {}", orderMaster);
+            throw new SellException(ResultStatus.ORDER_UPDATE_FAIL);
+        }
+        return null;
+    }
 }

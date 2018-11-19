@@ -53,7 +53,7 @@ public class BuyerOrderController {
         //验证订单是否有误
         if(bindingResult.hasErrors()) {
             log.error("【创建订单】订单参数有误, OrderForm :{}", orderForm);
-            throw new SellException(ResultStatus.ORDER_PARAM_EEROR.getCode(),
+            throw new SellException(ResultStatus.ORDER_PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
 
         }
@@ -61,7 +61,7 @@ public class BuyerOrderController {
         OrderDTO orderDTO = OrderFormToOrderDTOConverter.converter(orderForm);
         if(CollectionUtils.isEmpty(orderDTO.getOrderDetailList())) {
             log.error("【创建订单】购物车不能为空，orderDetailList :{}", orderDTO.getOrderDetailList());
-            throw new SellException(ResultStatus.CART_EMPIY);
+            throw new SellException(ResultStatus.CART_EMPTY);
         }
         //创建订单
         OrderDTO order = orderService.createOrder(orderDTO);

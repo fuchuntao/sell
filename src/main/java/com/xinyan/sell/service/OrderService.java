@@ -60,6 +60,11 @@ public interface OrderService {
      */
     Page<OrderDTO> list(Pageable pageable);
 
-
+    /**
+     * 完结订单
+     * @param orderDTO
+     * @return
+     */
+    OrderDTO finish(OrderDTO orderDTO);
 
 }

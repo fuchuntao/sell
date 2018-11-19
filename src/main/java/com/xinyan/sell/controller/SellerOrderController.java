@@ -35,6 +35,7 @@ public class SellerOrderController {
     public String list(@RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
                        @RequestParam(value = "size",required = false,defaultValue = "5") Integer size,
                        Map<String ,Object> map){
+        //带分页的查询列表
         PageRequest pageRequest = new PageRequest(page-1,size);
         Page<OrderDTO> orderDTOPage = orderService.list(pageRequest);
         map.put("orderDTOPage",orderDTOPage);
@@ -52,6 +53,14 @@ public class SellerOrderController {
         return "order/detail";
     }
 
+    /**
+     * 取消订单
+     * @param orderId
+     * @param page
+     * @param size
+     * @param map
+     * @return
+     */
     @GetMapping("/cancel")
     public String cancel(@RequestParam("orderId") String orderId,
                          @RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
@@ -59,7 +68,24 @@ public class SellerOrderController {
                          Map<String ,Object> map){
         //先根据orderId查出orderDTO对象
         OrderDTO orderDTO = orderService.findOne(orderId);
+        //调用cancel方法取消订单
         orderService.cancel(orderDTO);
+        //带分页的列表
+        PageRequest pageRequest = new PageRequest(page-1,size);
+        Page<OrderDTO> orderDTOPage = orderService.list(pageRequest);
+        map.put("orderDTOPage",orderDTOPage);
+        return "order/list";
+    }
+
+    @GetMapping("/finish")
+    public String finish(@RequestParam("orderId") String orderId,
+                         @RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
+                         @RequestParam(value = "size",required = false,defaultValue = "5") Integer size,
+                         Map<String ,Object> map){
+        //先根据orderId查出orderDTO对象
+        OrderDTO orderDTO = orderService.findOne(orderId);
+        orderService.finish(orderDTO);
+        //带分页的列表
         PageRequest pageRequest = new PageRequest(page-1,size);
         Page<OrderDTO> orderDTOPage = orderService.list(pageRequest);
         map.put("orderDTOPage",orderDTOPage);
