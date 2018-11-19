@@ -61,6 +61,5 @@ public interface OrderService {
     Page<OrderDTO> list(Pageable pageable);
 
 
-    OrderDetail getOrderDetail(String orderId);
 
 }

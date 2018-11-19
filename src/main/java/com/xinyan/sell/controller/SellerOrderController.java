@@ -52,5 +52,19 @@ public class SellerOrderController {
         return "order/detail";
     }
 
+    @GetMapping("/cancel")
+    public String cancel(@RequestParam("orderId") String orderId,
+                         @RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
+                         @RequestParam(value = "size",required = false,defaultValue = "5") Integer size,
+                         Map<String ,Object> map){
+        //先根据orderId查出orderDTO对象
+        OrderDTO orderDTO = orderService.findOne(orderId);
+        orderService.cancel(orderDTO);
+        PageRequest pageRequest = new PageRequest(page-1,size);
+        Page<OrderDTO> orderDTOPage = orderService.list(pageRequest);
+        map.put("orderDTOPage",orderDTOPage);
+        return "order/list";
+    }
+
 
 }
