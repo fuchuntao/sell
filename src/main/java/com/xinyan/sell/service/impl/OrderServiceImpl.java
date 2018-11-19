@@ -241,6 +241,10 @@ public class OrderServiceImpl implements OrderService {
         return orderDTOPage;
     }
 
+    @Override
+    public OrderDetail getOrderDetail(String orderId) {
+        return null;
+    }
 
 
 }

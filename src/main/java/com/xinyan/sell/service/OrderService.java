@@ -1,6 +1,7 @@
 package com.xinyan.sell.service;
 
 import com.xinyan.sell.dto.OrderDTO;
+import com.xinyan.sell.po.OrderDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -60,6 +61,6 @@ public interface OrderService {
     Page<OrderDTO> list(Pageable pageable);
 
 
-
+    OrderDetail getOrderDetail(String orderId);
 
 }
