@@ -1841,3 +1841,707 @@ Initializing Spring FrameworkServlet 'dispatcherServlet'
 FrameworkServlet 'dispatcherServlet': initialization started
 FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
 HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 4108 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 15:40:31 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5be42947] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2305 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 15:40:31 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.933 seconds (JVM running for 8.649)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 5580 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:55:10 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fa72150] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1962 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:55:10 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.361 seconds (JVM running for 7.908)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 7224 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:56:01 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eeff1c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1781 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:56:01 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 5.849 seconds (JVM running for 8.57)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+HHH000397: Using ASTQueryTranslatorFactory
+【完结】订单支付状态错误, orderId : 123, payStatus : 1
+Starting SellApplication on fjq with PID 1276 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:58:42 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b23ad491] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2376 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 15:58:42 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.836 seconds (JVM running for 8.554)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 5340 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:16:35 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2f9d394] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2311 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:16:35 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.752 seconds (JVM running for 9.22)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 8412 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:20:07 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bddbfc4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1874 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:20:07 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.5 seconds (JVM running for 8.353)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 5856 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:22:37 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bddbfc4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1769 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:22:37 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 5.707 seconds (JVM running for 8.579)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting SellApplication on fjq with PID 8972 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:27:44 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$10af0600] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1928 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 16:27:44 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 6.607 seconds (JVM running for 9.094)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting OrderServiceTest on fjq with PID 5916 (started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@305ffe9e: startup date [Mon Nov 19 16:57:38 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d856899] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@305ffe9e: startup date [Mon Nov 19 16:57:38 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started OrderServiceTest in 10.337 seconds (JVM running for 12.717)
+HHH000397: Using ASTQueryTranslatorFactory
+【取消订单】订单状态不是新订单，orderId:123, orderStatus:1
+Closing org.springframework.web.context.support.GenericWebApplicationContext@305ffe9e: startup date [Mon Nov 19 16:57:38 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting OrderServiceTest on fjq with PID 4308 (started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2f9a01c1: startup date [Mon Nov 19 16:58:24 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ffb7e7b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2f9a01c1: startup date [Mon Nov 19 16:58:24 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started OrderServiceTest in 10.862 seconds (JVM running for 13.105)
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.web.context.support.GenericWebApplicationContext@2f9a01c1: startup date [Mon Nov 19 16:58:24 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting SellApplication on fjq with PID 9060 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+HV000001: Hibernate Validator 5.3.6.Final
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 17:05:29 CST 2018]; root of context hierarchy
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d6e2ad5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1747 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Mon Nov 19 17:05:29 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 7.837 seconds (JVM running for 9.336)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Starting OrderServiceTest on fjq with PID 9208 (started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:12:24 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90043796] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:12:24 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started OrderServiceTest in 10.682 seconds (JVM running for 12.214)
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:12:24 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting OrderServiceTest on fjq with PID 7656 (started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:14:51 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a1b5435e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:14:51 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started OrderServiceTest in 11.015 seconds (JVM running for 12.538)
+HHH000397: Using ASTQueryTranslatorFactory
+【完结订单】订单状态不是新订单，orderId:123, orderStatus:1
+Closing org.springframework.web.context.support.GenericWebApplicationContext@302c971f: startup date [Mon Nov 19 17:14:51 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting OrderServiceTest on fjq with PID 5444 (started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@25be7b63: startup date [Mon Nov 19 17:15:21 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b048e0fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@25be7b63: startup date [Mon Nov 19 17:15:21 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started OrderServiceTest in 10.218 seconds (JVM running for 11.636)
+HHH000397: Using ASTQueryTranslatorFactory
+【完结订单】订单状态不是新订单，orderId:123, orderStatus:1
+Closing org.springframework.web.context.support.GenericWebApplicationContext@25be7b63: startup date [Mon Nov 19 17:15:21 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Starting SellApplication on fjq with PID 7984 (C:\sell\target\classes started by Administrator in C:\sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 17:15:44 CST 2018]; root of context hierarchy
+HV000001: Hibernate Validator 5.3.6.Final
+Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7395a7a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.34
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1810 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72967906: startup date [Mon Nov 19 17:15:44 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.create(com.xinyan.sell.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.cancel(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findOne(java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerOrderController.findList(java.lang.String,java.lang.Integer,java.lang.Integer)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.xinyan.sell.vo.ResultVO com.xinyan.sell.controller.BuyerProductController.list()
+Mapped "{[/pay/create]}" onto public java.lang.String com.xinyan.sell.controller.PayOrderController.pay(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.finish(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.cancel(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public java.lang.String com.xinyan.sell.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 5.685 seconds (JVM running for 7.355)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+HHH000397: Using ASTQueryTranslatorFactory

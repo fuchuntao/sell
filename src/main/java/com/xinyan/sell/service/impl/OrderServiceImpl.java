@@ -257,6 +257,13 @@ public class OrderServiceImpl implements OrderService {
                     orderDTO.getOrderId(), orderDTO.getOrderStatus());
             throw new SellException(ResultStatus.ORDER_STATUS_ERROR);
         }
+        //判断订单支付状态
+        if(!orderDTO.getPayStatus().equals(PayStatus.PAID.getCode())) {
+            log.info("【完结】订单支付状态错误, orderId : {}, payStatus : {}",
+                    orderDTO.getOrderId(), orderDTO.getPayStatus());
+            throw new SellException(ResultStatus.ORDER_PAY_STATUS_ERROR);
+
+        }
         //修改订单状态
         orderDTO.setOrderStatus(OrderStatus.FINISH.getCode());
         OrderMaster orderMaster = new OrderMaster();
@@ -266,6 +273,6 @@ public class OrderServiceImpl implements OrderService {
             log.info("【完结订单】修改订单状态出错, orderMaster : {}", orderMaster);
             throw new SellException(ResultStatus.ORDER_UPDATE_FAIL);
         }
-        return null;
+        return orderDTO;
     }
 }
