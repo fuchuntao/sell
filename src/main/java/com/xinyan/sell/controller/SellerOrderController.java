@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.awt.print.Pageable;
 import java.util.Map;
 
 /**
  * Administrator
  * 2018/11/17 0017
+ * 卖家订单Controller
  */
 @RequestMapping("/seller/order")
 @Controller
@@ -24,6 +24,13 @@ public class SellerOrderController {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * 订单列表
+     * @param page
+     * @param size
+     * @param map
+     * @return
+     */
     @GetMapping("/list")
     public String list(@RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
                        @RequestParam(value = "size",required = false,defaultValue = "5") Integer size,

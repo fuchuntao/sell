@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 /**
  * Administrator
  * 2018/11/16 0016
- * 商品详情vo对象
+ * 商品详情ProductInfoVO对象
  *
  */
 @Data

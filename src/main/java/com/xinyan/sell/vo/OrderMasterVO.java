@@ -1,30 +1,19 @@
-package com.xinyan.sell.po;
+package com.xinyan.sell.vo;
 
 import com.xinyan.sell.enums.OrderStatus;
 import com.xinyan.sell.enums.PayStatus;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * OrderMaster 数据表持久化类
- * (@DynamicUpdate) 动态更新
- * (@Entity) 和数据库表进行映射
- * (@Data) 自动生成 Getter,Setter,toString
- * @author 莫言
- * @date 2018/11/16
+ * Administrator
+ * 2018/11/18 0018
+ * 订单主表OrderMasterVO
  */
-
 @Data
-@Entity
-@DynamicUpdate
-public class OrderMaster {
-
-    @Id
+public class OrderMasterVO {
     /**
      * 订单id
      */

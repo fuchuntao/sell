@@ -9,29 +9,31 @@ import java.util.stream.Collectors;
 
 /**
  * Administrator
- * 2018/11/17 0017
+ * 2018/11/18 0018
+ * OrderMasterToOrderDTO转换类
  */
 public class OrderMasterToOrderDTOConverter {
 
-    private OrderMasterToOrderDTOConverter(){
+
+    public OrderMasterToOrderDTOConverter() {
 
     }
 
-   /**
-     * 将OrderMaster对象转换成OrderDTO对象
-     * @param orderMaster
-     * @return
-     */
-    public static OrderDTO converter(OrderMaster orderMaster){
+
+    public static OrderDTO converter(OrderMaster orderMaster) {
 
         OrderDTO orderDTO = new OrderDTO();
-        BeanUtils.copyProperties(orderMaster,orderDTO);
+        BeanUtils.copyProperties(orderMaster, orderDTO);
         return orderDTO;
+
     }
 
-    public static List<OrderDTO> converter(List<OrderMaster> orderMasterList){
+
+    public static List<OrderDTO> converter(List<OrderMaster> orderMasterList) {
         List<OrderDTO> orderDTOList = orderMasterList.stream()
                 .map(e -> converter(e)).collect(Collectors.toList());
+
         return orderDTOList;
     }
+
 }

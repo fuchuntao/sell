@@ -15,7 +15,7 @@ import java.util.Date;
 /**
  * Administrator
  * 2018/11/16 0014
- *
+ * 商品列表实体类
  */
 @Table(name = "product_info")
 @Data //自动生成set,get
