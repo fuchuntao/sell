@@ -25,4 +25,6 @@ public class ProductInfoDTO {
 
     private Integer categoryType;
 
+    private String categoryName;
+
 }

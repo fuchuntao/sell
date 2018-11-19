@@ -62,15 +62,20 @@
                                              <td>${productInfoDTO.productName}</td>
                                              <td>${productInfoDTO.productPrice}</td>
                                              <td>${productInfoDTO.productStock}</td>
-                                             <td>${productInfoDTO.productStatus}</td>
+                                             <td>
+                                                 <#if productInfoDTO.productStatus == 0>上架
+                                                 <#elseif productInfoDTO.productStatus == 1>下架
+                                                 </#if>
+                                             </td>
                                              <td>${productInfoDTO.categoryType}</td>
                                              <td>
                                                   <#if productInfoDTO.productStatus == 0>
-                                                 <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/updateStatusDown?productId=${productInfoDTO.productId}">下架</a>
+                                                   <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/updateStatusDown?productId=${productInfoDTO.productId}">下架</a>
                                                   <#elseif productInfoDTO.productStatus == 1>
                                                   <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/updateStatusUp?productId=${productInfoDTO.productId}">上架</a>
                                                   </#if>
-                                                 <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/delete?productId=${productInfoDTO.productId}">删除</a>
+                                                  <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/delete?productId=${productInfoDTO.productId}">删除</a>
+                                                  <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/update?productId=${productInfoDTO.productId}">更新</a>
                                              </td>
                                          </tr>
                                          </#list>

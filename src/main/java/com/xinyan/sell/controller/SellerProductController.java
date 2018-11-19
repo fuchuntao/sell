@@ -76,4 +76,14 @@ public class SellerProductController  {
 
         return "redirect:list";
     }
+
+    //更新商品信息
+    @RequestMapping("/update")
+    public String update(@RequestParam("productId") String productId,Map<String, Object> map){
+        //根据商品id找到商品对象
+        ProductInfo productInfo=productService.findOne(productId);
+        //将获取的对象放到请求域中
+        map.put("productInfo",productInfo);
+        return "redirect:edit";
+    }
 }
