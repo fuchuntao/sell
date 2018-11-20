@@ -1,6 +1,8 @@
 package com.xinyan.sell.service.impl;
 
+import com.xinyan.sell.converter.ProductInfoToProductInfoDTO;
 import com.xinyan.sell.dto.CartDTO;
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.enums.ResultStatus;
 import com.xinyan.sell.exception.SellException;
 import com.xinyan.sell.po.ProductInfo;
@@ -9,7 +11,7 @@ import com.xinyan.sell.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -52,10 +54,17 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     @Override
-    public Page<ProductInfo> findAll(Pageable pageable) {
-        PageRequest pageRequest =new PageRequest(pageable.getPageNumber(),pageable.getPageSize());
-        Page<ProductInfo> page = productRepository.findAll(pageRequest);
-        return page;
+    public Page<ProductInfoDTO> findAll(Pageable pageable) {
+        //创建商品信息分页对象
+     Page<ProductInfo> productInfoPage=productRepository.findAll(pageable);
+
+        //将商品信息分页对象转换为商品信息DTO对象（list）
+     List<ProductInfoDTO> productInfoDTOList=ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
+
+        //将list的DTO对象封装为分页DTO对象
+     Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
+
+        return productInfoDTOPage;
     }
 
     /**
@@ -122,4 +131,25 @@ public class ProductServiceImpl implements ProductService {
             productRepository.save(productInfo);
         }
     }
+
+
+    /**
+     * @param productInfo
+     * 保存或更新商品信息
+     */
+    @Override
+    public void save(ProductInfo productInfo) {
+        productRepository.save(productInfo);
+    }
+
+    /**
+     * @param productInfo
+     * 删除商品信息
+     */
+    @Override
+    public void delete(ProductInfo productInfo) {
+        productRepository.delete(productInfo);
+    }
+
+
 }

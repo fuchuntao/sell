@@ -45,13 +45,14 @@ public class ProductServiceTest {
     /**
      * 分页查询测试
      */
-    @Test
-    public void findAll1() {
-        PageRequest pageRequest = new PageRequest(0, 2);
-        Page<ProductInfo> page = productService.findAll(pageRequest);
-        Assert.assertNotEquals(0, page.getTotalElements());
-
-    }
+//    @Test
+//    public void findAll1() {
+//        PageRequest pageRequest = new PageRequest(0, 2);
+//        Page<ProductInfo> page = productService.findAll(pageRequest);
+//
+//        Assert.assertNotEquals(0, page.getTotalElements());
+//
+//    }
 
     /**
      * 商品查询：商品状态

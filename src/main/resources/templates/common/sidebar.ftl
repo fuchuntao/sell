@@ -19,7 +19,8 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark"
+                       href="${basePath}/seller/product/list" aria-expanded="false">
                         <i class="icon-Car-Wheel"></i>
                         <span class="hide-menu">商品 </span>
                     </a>

@@ -1,7 +1,7 @@
 package com.xinyan.sell.controller;
 
 
-import com.xinyan.sell.DTO.ProductInfoDTO;
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.enums.ProductStatus;
 import com.xinyan.sell.po.ProductInfo;
 import com.xinyan.sell.service.ProductService;
@@ -19,6 +19,7 @@ import java.util.Map;
 /**
  * Administrator
  * 2018/11/16 0016
+ * 卖家商品Controller
  */
 @RequestMapping("/seller/product")
 @Controller
@@ -53,6 +54,7 @@ public class SellerProductController  {
      * @param productId
      * @return
      */
+
     @RequestMapping("/updateStatusDown")
     public String updateStatusDown(@RequestParam("productId") String productId){
         //通过商品id找到商品对象

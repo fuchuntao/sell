@@ -1,9 +1,8 @@
 package com.xinyan.sell.converter;
 
-import com.xinyan.sell.DTO.ProductInfoDTO;
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductInfo;
 import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 import java.util.stream.Collectors;
