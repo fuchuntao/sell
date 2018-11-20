@@ -38,7 +38,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductCategoryRepository productCategoryRepository;
 
     /**
-     *单个商品查询
+     * 单个商品查询
+     *
      * @param productId
      * @return
      */
@@ -49,6 +50,7 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 商品列表查询
+     *
      * @return
      */
     @Override
@@ -58,25 +60,26 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 分页查询
+     *
      * @param pageable
      * @return
      */
     @Override
     public Page<ProductInfoDTO> findAll(Pageable pageable) {
         //创建商品信息分页对象
-     Page<ProductInfo> productInfoPage=productRepository.findAll(pageable);
+        Page<ProductInfo> productInfoPage = productRepository.findAll(pageable);
 
-     //获取所有的商品类目
-        List<ProductCategory> productRepositoryList=productCategoryRepository.findAll();
+        //获取所有的商品类目
+        List<ProductCategory> productRepositoryList = productCategoryRepository.findAll();
 
 
         //将商品信息分页对象转换为商品信息DTO对象（list）
-     List<ProductInfoDTO> productInfoDTOList=ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
-        for (ProductInfoDTO productInfoDTO:productInfoDTOList){
+        List<ProductInfoDTO> productInfoDTOList = ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
+        for (ProductInfoDTO productInfoDTO : productInfoDTOList) {
 //            for (ProductCategory productCategory:productRepositoryList){
-                for (ProductInfo productInfo:productInfoPage){
-                    ProductCategory productCategory1=productCategoryRepository.findOneByCategoryType(productInfo.getCategoryType());
-                    productInfoDTO.setCategoryName(productCategory1.getCategoryName());
+            for (ProductInfo productInfo : productInfoPage) {
+                ProductCategory productCategory1 = productCategoryRepository.findOneByCategoryType(productInfo.getCategoryType());
+                productInfoDTO.setCategoryName(productCategory1.getCategoryName());
 //                }
             }
 
@@ -84,13 +87,14 @@ public class ProductServiceImpl implements ProductService {
 
 
         //将list的DTO对象封装为分页DTO对象
-     Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
+        Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
 
         return productInfoDTOPage;
     }
 
     /**
      * 商品查询：商品状态
+     *
      * @param productStatus
      * @return
      */
@@ -100,26 +104,26 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
-
     /**
      * 减少库存
+     *
      * @param cartDTOList
      */
     @Override
     public void decreaseStock(List<CartDTO> cartDTOList) {
 
-        for(CartDTO cartDTO : cartDTOList) {
+        for (CartDTO cartDTO : cartDTOList) {
 
             //判断商品是否存在
             ProductInfo productInfo = productRepository.findOne(cartDTO.getProductId());
-            if(productInfo == null) {
+            if (productInfo == null) {
                 log.info("【减少库存】商品不存在，ProductId : {}", cartDTO.getProductId());
                 throw new SellException(ResultStatus.PRODUCT_NOT__EXIST);
             }
 
             //判断库存是否足够
             Integer quantity = productInfo.getProductStock() - cartDTO.getProductQuantity();
-            if(quantity == null) {
+            if (quantity == null) {
                 log.info("【减少库存】商品库存不足, ProductStock : {}", productInfo.getProductStock());
                 throw new SellException(ResultStatus.PRODUCT_STOCK_ERROR);
             }
@@ -134,14 +138,15 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 取消订单增加库存
+     *
      * @param cartDTOList
      */
     @Override
     public void increaseStock(List<CartDTO> cartDTOList) {
-        for(CartDTO cartDTO : cartDTOList) {
+        for (CartDTO cartDTO : cartDTOList) {
             //判断上商品是否存在
             ProductInfo productInfo = productRepository.findOne(cartDTO.getProductId());
-            if(productInfo == null) {
+            if (productInfo == null) {
                 log.info("【增加库存】商品不存在, productInfo: {}", cartDTO.getProductId());
                 throw new SellException(ResultStatus.PRODUCT_NOT__EXIST);
             }
@@ -156,8 +161,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     /**
-     * @param productInfo
-     * 保存或更新商品信息
+     * @param productInfo 保存或更新商品信息
      */
     @Override
     public void save(ProductInfo productInfo) {
@@ -165,8 +169,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * @param productInfo
-     * 删除商品信息
+     * @param productInfo 删除商品信息
      */
     @Override
     public void delete(ProductInfo productInfo) {
@@ -174,8 +177,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * @return
-     * 查询所有的类目
+     * @return 查询所有的类目
      */
     @Override
     public List<ProductCategoryDTO> findAllProductCategory() {

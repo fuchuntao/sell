@@ -35,6 +35,7 @@ public class SellerProductController  {
 
     @Autowired
     private ProductService productService;
+
     @Autowired
     private ProductCategoryService productCategoryService;
 
@@ -152,7 +153,7 @@ public class SellerProductController  {
      * @param productInfoDTO
      * @return
      */
-    @GetMapping("/save/{id}")
+    @GetMapping("/save/{productId}")
     public String save(@PathVariable("productId") String productId,
                        ProductInfoDTO productInfoDTO){
 
