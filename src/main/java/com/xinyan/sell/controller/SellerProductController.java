@@ -3,12 +3,14 @@ package com.xinyan.sell.controller;
 
 import com.xinyan.sell.DTO.ProductCategoryDTO;
 import com.xinyan.sell.DTO.ProductInfoDTO;
+import com.xinyan.sell.converter.ProductInfoDTOToProductInfo;
 import com.xinyan.sell.converter.ProductInfoToProductInfoDTO;
 import com.xinyan.sell.enums.ProductStatus;
 import com.xinyan.sell.po.ProductCategory;
 import com.xinyan.sell.po.ProductInfo;
 import com.xinyan.sell.service.ProductCategoryService;
 import com.xinyan.sell.service.ProductService;
+import com.xinyan.sell.utils.KeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -88,7 +90,7 @@ public class SellerProductController  {
         return "redirect:list";
     }
 
-    //更新商品信息
+    //去更新商品信息页面
     @RequestMapping("/update")
     public String update(@RequestParam("productId") String productId,Map<String, Object> map){
         //根据商品id找到商品对象
@@ -107,6 +109,28 @@ public class SellerProductController  {
         return "product/update";
     }
 
+
+    //更新商品信息
+    @GetMapping("/save/{productId}")
+    public String save(@PathVariable("productId") String productId, ProductInfoDTO productInfoDTO){
+
+        //根据商品Id查询商品是否存在
+        ProductInfo pro=productService.findOne(productId);
+        //如果DTO不为空，则将商品信息更新后保存
+        if (!productInfoDTO.getProductId().isEmpty()){
+            pro.setProductName(productInfoDTO.getProductName());
+            pro.setProductPrice(productInfoDTO.getProductPrice());
+            pro.setProductStock(productInfoDTO.getProductStock());
+            pro.setProductDescription(productInfoDTO.getProductDescription());
+            pro.setProductIcon(productInfoDTO.getProductIcon());
+            pro.setProductStatus(productInfoDTO.getProductStatus());
+
+        }
+        //保存信息
+        productService.save(pro);
+        return "redirect:/seller/product/list";
+    }
+
     //去添加商品
     @RequestMapping("/toAdd")
     public String toAdd(Model model){
@@ -117,28 +141,17 @@ public class SellerProductController  {
         return "product/add";
     }
 
-    //添加商品
-    @GetMapping("/save/{productId}")
-    public String save(@PathVariable("productId") String productId,
-                       ProductInfoDTO productInfoDTO){
+    @PostMapping("/add")
+    public String add(ProductInfoDTO productInfoDTO,ProductCategoryDTO productCategoryDTO){
+        //将DTO对象转换为productInfo对象
+        ProductInfo productInfo = ProductInfoDTOToProductInfo.converter(productInfoDTO);
 
-
-        //根据商品Id查询商品是否存在
-        ProductInfo pro=productService.findOne(productId);
-        if (!productInfoDTO.getProductId().isEmpty()){
-            pro.setProductName(productInfoDTO.getProductName());
-            pro.setProductPrice(productInfoDTO.getProductPrice());
-            pro.setProductStock(productInfoDTO.getProductStock());
-            pro.setProductDescription(productInfoDTO.getProductDescription());
-            pro.setProductIcon(productInfoDTO.getProductIcon());
-            pro.setProductStatus(productInfoDTO.getProductStatus());
-
-            //通过获取DTO对象的CategoryName查找CategoryType
-            ProductCategory productCategory=productCategoryService.findByCategoryName(productInfoDTO.getCategoryName());
-
-            pro.setCategoryType(productCategory.getCategoryType());
-        }
-        productService.save(pro);
-        return "redirect:/seller/product/list";
+        //通过categoryName找到商品类目对象
+        ProductCategory productCategory=productCategoryService.findByCategoryName(productCategoryDTO.getCategoryName());
+        //
+        productInfo.setCategoryType(productCategory.getCategoryType());
+        productInfo.setProductId(KeyUtil.generateUniqueKey());
+        productService.save(productInfo);
+        return  "redirect:list";
     }
 }

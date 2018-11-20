@@ -55,17 +55,15 @@ public class ProductServiceImpl implements ProductService {
      Page<ProductInfo> productInfoPage=productRepository.findAll(pageable);
 
      //获取所有的商品类目
-        List<ProductCategory> productRepositoryList=productCategoryRepository.findAll();
+//        List<ProductCategory> productRepositoryList=productCategoryRepository.findAll();
 
 
         //将商品信息分页对象转换为商品信息DTO对象（list）
      List<ProductInfoDTO> productInfoDTOList=ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
         for (ProductInfoDTO productInfoDTO:productInfoDTOList){
-//            for (ProductCategory productCategory:productRepositoryList){
                 for (ProductInfo productInfo:productInfoPage){
                     ProductCategory productCategory1=productCategoryRepository.findOneByCategoryType(productInfo.getCategoryType());
                     productInfoDTO.setCategoryName(productCategory1.getCategoryName());
-//                }
             }
 
         }

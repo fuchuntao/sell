@@ -30,4 +30,5 @@ public class ProductInfoDTO {
     private String productDescription;
 
     private String productIcon;
+
 }
