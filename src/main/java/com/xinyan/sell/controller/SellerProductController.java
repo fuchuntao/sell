@@ -15,10 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.support.HttpRequestHandlerServlet;
 
 import java.util.List;
@@ -121,7 +118,7 @@ public class SellerProductController  {
     }
 
     //添加商品
-    @PostMapping("/save/{id}")
+    @GetMapping("/save/{id}")
     public String save(@PathVariable("productId") String productId,
                        ProductInfoDTO productInfoDTO){
 

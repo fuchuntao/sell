@@ -41,7 +41,7 @@
                 </div>
             </div>
                 <hr class="m-t-0">
-                <form  action="${basePath}/seller/product/save/productId=${productInfoDTO.productId}" method="post">
+                <form  action="${basePath}/seller/product/save/${productInfoDTO.productId}" >
                     <div class="card-body">
                         <h4 class="card-title">productInfo</h4>
                             <div type="hidden" class="form-group row align-items-center m-b-0">
