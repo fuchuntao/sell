@@ -1,5 +1,5 @@
-package com.xinyan.sell.DTO;
-import com.xinyan.sell.enums.ProductStatus;
+package com.xinyan.sell.dto;
+
 import lombok.Data;
 
 import java.math.BigDecimal;
