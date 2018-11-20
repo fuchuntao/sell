@@ -35,7 +35,7 @@ public interface ProductCategoryService {
      */
     public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryType);
 
-    //===================卖家端
+    //===================卖家端==========================
     /**
      * @param categoryType
      * @return

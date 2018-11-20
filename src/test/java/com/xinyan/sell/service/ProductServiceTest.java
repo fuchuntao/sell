@@ -58,4 +58,40 @@ public class ProductServiceTest {
     @Test
     public void decreaseStock() {
     }
+
+    @Test
+    public void findOne1() {
+    }
+
+    @Test
+    public void findAll1() {
+    }
+
+    @Test
+    public void findAll2() {
+    }
+
+    @Test
+    public void findByProductStatus() {
+    }
+
+    @Test
+    public void decreaseStock1() {
+    }
+
+    @Test
+    public void increaseStock() {
+    }
+
+    @Test
+    public void save() {
+    }
+
+    @Test
+    public void delete() {
+    }
+
+    @Test
+    public void findAllProductCategory() {
+    }
 }
