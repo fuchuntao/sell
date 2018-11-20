@@ -38,6 +38,9 @@ public class OrderServiceTest {
 
     }
 
+    /**
+     * 取消订单单元测试
+     */
     @Test
     public void cancelTest() {
         OrderDTO orderDTO = orderService.findOne("123");
@@ -53,6 +56,9 @@ public class OrderServiceTest {
 
     //==================================卖家订单测试=====================
 
+    /**
+     * 卖家订单列表单元测试
+     */
     @Test
     public void listTest(){
         PageRequest pageRequest = new PageRequest(0,5);
@@ -60,6 +66,9 @@ public class OrderServiceTest {
         Assert.assertNotNull(orderDTOPage);
     }
 
+    /**
+     * 完结订单单元测试
+     */
     @Test
     public void  finishTest(){
         OrderDTO orderDTO = orderService.findOne("123");
