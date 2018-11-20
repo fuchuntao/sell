@@ -2,13 +2,13 @@ package com.xinyan.sell.controller;
 
 import com.xinyan.sell.dto.OrderDTO;
 import com.xinyan.sell.service.OrderService;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
@@ -77,6 +77,14 @@ public class SellerOrderController {
         return "order/list";
     }
 
+    /**
+     * 完结订单
+     * @param orderId
+     * @param page
+     * @param size
+     * @param map
+     * @return
+     */
     @GetMapping("/finish")
     public String finish(@RequestParam("orderId") String orderId,
                          @RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
