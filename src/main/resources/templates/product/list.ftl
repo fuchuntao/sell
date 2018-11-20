@@ -26,7 +26,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">首页</li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    订单
+                                    商品
                                 </li>
                             </ol>
                         </nav>
@@ -44,6 +44,7 @@
                             <h4 class="card-title">订单列表</h4>
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
+                                    <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/toAdd">添加</a>
                                     <thead>
                                     <tr>
                                         <th class="text-center">商品ID</th>
@@ -67,7 +68,7 @@
                                                  <#elseif productInfoDTO.productStatus == 1>下架
                                                  </#if>
                                              </td>
-                                             <td>${productInfoDTO.categoryType}</td>
+                                             <td>${productInfoDTO.categoryName}</td>
                                              <td>
                                                   <#if productInfoDTO.productStatus == 0>
                                                    <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/updateStatusDown?productId=${productInfoDTO.productId}">下架</a>
@@ -83,43 +84,43 @@
                                 </table>
                                 <!-- 分页 -->
                                 <ul class="pagination float-right">
-                                        <#if productInfoDTOPage.first>
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number}">
-                                                上一页
-                                            </a>
-                                        </li>
+                                    <#if productInfoDTOPage.first>
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number}">
+                                            上一页
+                                        </a>
+                                    </li>
+                                    <#else>
+                                    <li class="page-item">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number}" aria-label="Previous">
+                                            上一页
+                                        </a>
+                                    </li>
+                                    </#if>
+                                    <#list 1..productInfoDTOPage.totalPages as index>
+                                        <#if productInfoDTOPage.number == (index - 1)>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${index}">${index}</a>
+                                    </li>
                                         <#else>
-                                        <li class="page-item">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number}" aria-label="Previous">
-                                                上一页
-                                            </a>
-                                        </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${index}">${index}</a>
+                                    </li>
                                         </#if>
-                                        <#list 1..productInfoDTOPage.totalPages as index>
-                                            <#if productInfoDTOPage.number == (index - 1)>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${index}">${index}</a>
-                                        </li>
-                                            <#else>
-                                        <li class="page-item">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${index}">${index}</a>
-                                        </li>
-                                            </#if>
-                                        </#list>
-                                        <#if productInfoDTOPage.last>
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number+1}" aria-label="Next">
-                                                下一页
-                                            </a>
-                                        </li>
-                                        <#else>
-                                        <li class="page-item">
-                                            <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number+2}" aria-label="Next">
-                                                下一页
-                                            </a>
-                                        </li>
-                                        </#if>
+                                    </#list>
+                                    <#if productInfoDTOPage.last>
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number+1}" aria-label="Next">
+                                            下一页
+                                        </a>
+                                    </li>
+                                    <#else>
+                                    <li class="page-item">
+                                        <a class="page-link" href="${basePath}/seller/product/list?page=${productInfoDTOPage.number+2}" aria-label="Next">
+                                            下一页
+                                        </a>
+                                    </li>
+                                    </#if>
                                 </ul>
                             </div>
                         </div>
