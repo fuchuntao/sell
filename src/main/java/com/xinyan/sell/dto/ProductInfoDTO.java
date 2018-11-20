@@ -25,4 +25,9 @@ public class ProductInfoDTO {
 
     private Integer categoryType;
 
+    private String categoryName;
+
+    private String productDescription;
+
+    private String productIcon;
 }

@@ -1,5 +1,6 @@
 package com.xinyan.sell.service;
 
+import com.xinyan.sell.dto.ProductCategoryDTO;
 import com.xinyan.sell.dto.CartDTO;
 import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductInfo;
@@ -65,4 +66,11 @@ public interface ProductService {
      * 删除商品信息
      */
     void delete(ProductInfo productInfo);
+
+
+    /**
+     * @return
+     * 查询所有的类目
+     */
+    public List<ProductCategoryDTO> findAllProductCategory();
 }

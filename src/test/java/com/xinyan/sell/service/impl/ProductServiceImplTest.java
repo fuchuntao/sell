@@ -1,6 +1,7 @@
 package com.xinyan.sell.service.impl;
 
 import com.xinyan.sell.po.ProductInfo;
+import com.xinyan.sell.repository.ProductCategoryRepository;
 import com.xinyan.sell.repository.ProductRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,11 +17,19 @@ public class ProductServiceImplTest {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ProductCategoryRepository productCategoryRepository;
     @Test
     public void delete() {
         ProductInfo productInfo=productRepository.findOne("1");
 
         productRepository.delete(productInfo);
 
+    }
+
+    @Test
+    public  void findAllProductCategory(){
+        productCategoryRepository.findAll();
     }
 }

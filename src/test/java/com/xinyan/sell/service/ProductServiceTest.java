@@ -54,16 +54,6 @@ public class ProductServiceTest {
 //
 //    }
 
-    /**
-     * 商品查询：商品状态
-     */
-    @Test
-    public void findByProductStatus() {
-        List<ProductInfo> productInfos = productService.findByProductStatus(0);
-        Assert.assertNotEquals(0, productInfos.size());
-
-
-    }
 
     @Test
     public void decreaseStock() {
