@@ -79,12 +79,12 @@
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品状态</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" <#if productInfoDTO.productStatus==0>checked</#if> class="custom-control-input" value="0" id="customControlValidation2" name="radio-stacked" required>
-                                    <label  class="custom-control-label" >上架</label>
+                                    <input type="radio" <#if productInfoDTO.productStatus==0>checked</#if> name="styled_radio" required id="styled_radio1" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio1">上架</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" <#if productInfoDTO.productStatus==1>checked</#if> class="custom-control-input" value="1" id="customControlValidation3" name="radio-stacked" required>
-                                    <label class="custom-control-label" >下架</label>
+                                    <input type="radio" <#if productInfoDTO.productStatus==1>checked</#if> name="styled_radio" id="styled_radio2" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio2">下架</label>
                                 </div>
                             </div>
                         </div>

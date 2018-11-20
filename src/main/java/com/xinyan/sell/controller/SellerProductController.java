@@ -118,13 +118,13 @@ public class SellerProductController  {
     }
 
     //添加商品
-    @GetMapping("/save/{id}")
+    @GetMapping("/save/{productId}")
     public String save(@PathVariable("productId") String productId,
                        ProductInfoDTO productInfoDTO){
 
 
         //根据商品Id查询商品是否存在
-        ProductInfo pro=productService.findOne(productInfoDTO.getProductId());
+        ProductInfo pro=productService.findOne(productId);
         if (!productInfoDTO.getProductId().isEmpty()){
             pro.setProductName(productInfoDTO.getProductName());
             pro.setProductPrice(productInfoDTO.getProductPrice());

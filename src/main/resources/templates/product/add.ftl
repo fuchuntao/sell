@@ -37,19 +37,19 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">商品编辑</h4>
+                    <h4 class="card-title">添加商品</h4>
                 </div>
             </div>
                 <hr class="m-t-0">
-                <form  action="${basePath}/seller/product/save" method="post">
+                <form  action="${basePath}/seller/product/add" method="post">
                     <div class="card-body">
                         <h4 class="card-title">productInfo</h4>
-                            <div type="hidden" class="form-group row align-items-center m-b-0">
-                                <label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>
-                                <div class="col-9 border-left p-b-10 p-t-10">
-                                    <input type="text"  name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">
-                                </div>
-                            </div>
+                            <#--<div type="hidden" class="form-group row align-items-center m-b-0">-->
+                                <#--<label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>-->
+                                <#--<div class="col-9 border-left p-b-10 p-t-10">-->
+                                    <#--<input type="text"  name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">-->
+                                <#--</div>-->
+                            <#--</div>-->
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品名称</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
@@ -79,12 +79,12 @@
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品状态</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" value="0" id="customControlValidation2" name="radio-stacked" required>
-                                    <label  class="custom-control-label" >上架</label>
+                                    <input type="radio" value="1" name="styled_radio" required id="styled_radio1" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio1">上架</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio"  class="custom-control-input" value="1" id="customControlValidation3" name="radio-stacked" required>
-                                    <label class="custom-control-label" >下架</label>
+                                    <input type="radio" value="2" name="styled_radio" id="styled_radio2" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio2">下架</label>
                                 </div>
                             </div>
                         </div>
