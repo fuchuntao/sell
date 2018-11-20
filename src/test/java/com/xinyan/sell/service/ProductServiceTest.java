@@ -20,6 +20,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductServiceTest {
+
     @Autowired
     private ProductService productService;
 
@@ -59,25 +60,15 @@ public class ProductServiceTest {
     public void decreaseStock() {
     }
 
-    @Test
-    public void findOne1() {
-    }
-
-    @Test
-    public void findAll1() {
-    }
-
-    @Test
-    public void findAll2() {
-    }
-
+    /**
+     * 商品查询：商品状态
+     */
     @Test
     public void findByProductStatus() {
+        List<ProductInfo> productInfos = productService.findByProductStatus(0);
+        Assert.assertNotEquals(0, productInfos.size());
     }
 
-    @Test
-    public void decreaseStock1() {
-    }
 
     @Test
     public void increaseStock() {

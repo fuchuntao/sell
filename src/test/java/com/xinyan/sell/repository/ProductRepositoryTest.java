@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * ProductRepository接口单元测试
@@ -39,10 +40,13 @@ public class ProductRepositoryTest {
         Assert.assertNotNull(productInfo1);
     }
 
-
+    /**
+     * 根据商品状态查询
+     */
     @Test
     public void findByProductStatus() {
-
+        List<ProductInfo> productInfos = productRepository.findByProductStatus(0);
+        Assert.assertNotEquals(0, productInfos.size());
 
     }
 }
