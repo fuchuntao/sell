@@ -1,7 +1,9 @@
 package com.xinyan.sell.service;
 
+import com.xinyan.sell.dto.CartDTO;
 import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductInfo;
+import com.xinyan.sell.utils.KeyUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -22,6 +25,8 @@ public class ProductServiceTest {
 
     @Autowired
     private ProductService productService;
+    @Autowired
+    private  ProductCategoryService productCategoryService;
 
     /**
      * 单个商品查询测试
@@ -76,13 +81,27 @@ public class ProductServiceTest {
 
     @Test
     public void save() {
+        ProductInfo productInfo=new ProductInfo();
+        productInfo.setProductId(KeyUtil.generateUniqueKey());
+        productInfo.setProductName("上海青");
+        productInfo.setProductIcon("www.oooo.pp");
+        productInfo.setCategoryType(2);
+        productInfo.setProductDescription("上海青不是上海特产");
+        productInfo.setProductPrice(new BigDecimal("15"));
+        productInfo.setProductStock(30);
+
+        productService.save(productInfo);
+        Assert.assertNotNull(productInfo);
     }
 
     @Test
     public void delete() {
+        ProductInfo productInfo=productService.findOne("7eeac3864d8644b7aa513b81dab6e96a");
+        productService.delete(productInfo);
     }
 
     @Test
     public void findAllProductCategory() {
+        productCategoryService.findAll();
     }
 }
