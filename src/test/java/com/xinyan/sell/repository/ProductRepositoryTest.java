@@ -1,6 +1,5 @@
 package com.xinyan.sell.repository;
 
-import com.xinyan.sell.enums.ProductStatus;
 import com.xinyan.sell.po.ProductInfo;
 import com.xinyan.sell.utils.KeyUtil;
 import org.junit.Assert;
@@ -12,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * ProductRepository接口单元测试
@@ -50,5 +47,6 @@ public class ProductRepositoryTest {
     public void findByProductStatus() {
         List<ProductInfo> productInfos = productRepository.findByProductStatus(0);
         Assert.assertNotEquals(0, productInfos.size());
+
     }
 }

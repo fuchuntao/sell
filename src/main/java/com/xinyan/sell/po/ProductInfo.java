@@ -17,7 +17,6 @@ import java.util.Date;
  * 2018/11/16 0014
  * 商品列表实体类
  */
-@Table(name = "product_info")
 @Data //自动生成set,get
 @Entity //和数据库表映射
 @DynamicUpdate //动态更新

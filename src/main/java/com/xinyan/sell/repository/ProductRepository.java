@@ -12,6 +12,7 @@ import java.util.List;
  * ProductRepository商品表的Repository接口
  */
 public interface ProductRepository extends JpaRepository<ProductInfo, String> {
+
     /**
      * 根据商品状态查询
      * @param productStatus

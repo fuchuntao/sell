@@ -23,23 +23,37 @@ public class OrderServiceTest {
     @Test
     public void createOrder() {
 
-
     }
 
+    /**
+     * 测试买家订单列表
+     */
     @Test
     public void findList() {
-
-
-    }
-
-    @Test
-    public void findOne() {
+        PageRequest pageRequest = new PageRequest(0, 5);
+        String buyOpenId = "qwer456";
+        Page<OrderDTO> orderDTOPage = orderService.findList(buyOpenId, pageRequest);
+        Assert.assertNotEquals(0, orderDTOPage.getSize());
 
 
     }
 
     /**
+     * 测试订单详情
+     */
+    @Test
+    public void findOne() {
+        OrderDTO orderDTO = orderService.findOne("1b08039906a54e699d43aaec8764bb2e");
+        Assert.assertNotNull(orderDTO);
+
+    }
+
+    /**
+<<<<<<< HEAD
      * 取消订单单元测试
+=======
+     * 测试取消订单
+>>>>>>> df3207e2819df499edb4b11270bf7081a6c41b3a
      */
     @Test
     public void cancelTest() {
@@ -48,9 +62,11 @@ public class OrderServiceTest {
         Assert.assertNotNull(cancel);
     }
 
+    /**
+     * 测试支付订单
+     */
     @Test
     public void paid() {
-
 
     }
 
