@@ -38,47 +38,26 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductInfo findOne(String productId) {
-       //根据id找到productInfo对象
-        ProductInfo productInfo=productRepository.findOne(productId);
+        //根据id找到productInfo对象
+        ProductInfo productInfo = productRepository.findOne(productId);
 
         return productInfo;
     }
 
     @Override
-    public List<ProductInfo> findAll() {
-        return null;
-    }
-
-    @Override
     public Page<ProductInfoDTO> findAll(Pageable pageable) {
         //创建商品信息分页对象
-     Page<ProductInfo> productInfoPage=productRepository.findAll(pageable);
-
-     //获取所有的商品类目
-//        List<ProductCategory> productRepositoryList=productCategoryRepository.findAll();
-
-
+        Page<ProductInfo> productInfoPage = productRepository.findAll(pageable);
         //将商品信息分页对象转换为商品信息DTO对象（list）
-     List<ProductInfoDTO> productInfoDTOList=ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
-        for (ProductInfoDTO productInfoDTO:productInfoDTOList){
-                for (ProductInfo productInfo:productInfoPage){
-                    ProductCategory productCategory1=productCategoryRepository.findOneByCategoryType(productInfo.getCategoryType());
-                    productInfoDTO.setCategoryName(productCategory1.getCategoryName());
-            }
-
-        }
-
-
+        List<ProductInfoDTO> productInfoDTOList = ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
         //将list的DTO对象封装为分页DTO对象
-     Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
+        Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
 
         return productInfoDTOPage;
     }
 
-
     /**
-     * @param productInfo
-     * 保存或更新商品信息
+     * @param productInfo 保存或更新商品信息
      */
     @Override
     public void save(ProductInfo productInfo) {
@@ -86,8 +65,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * @param productInfo
-     * 删除商品信息
+     * @param productInfo 删除商品信息
      */
     @Override
     public void delete(ProductInfo productInfo) {
@@ -95,14 +73,22 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * @return
-     * 查询所有的类目
+     * @return 查询所有的类目
      */
     @Override
     public List<ProductCategoryDTO> findAllProductCategory() {
         List<ProductCategory> productCategoryRepositoryAll = productCategoryRepository.findAll();
-        List<ProductCategoryDTO> converter = ProductCategoryToProductCategoryDTO.converter(productCategoryRepositoryAll);
-        return converter;
+        List<ProductCategoryDTO> productCategoryDTOList = ProductCategoryToProductCategoryDTO.converter(productCategoryRepositoryAll);
+        return productCategoryDTOList;
+    }
+
+    /**
+     * @return
+     * 查找所有的商品信息
+     */
+    @Override
+    public List<ProductInfo> findAll() {
+        return productRepository.findAll();
     }
 
 

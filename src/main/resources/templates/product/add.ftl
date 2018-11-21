@@ -44,12 +44,6 @@
                 <form  action="${basePath}/seller/product/add" method="post">
                     <div class="card-body">
                         <h4 class="card-title">productInfo</h4>
-                            <#--<div type="hidden" class="form-group row align-items-center m-b-0">-->
-                                <#--<label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>-->
-                                <#--<div class="col-9 border-left p-b-10 p-t-10">-->
-                                    <#--<input type="text"  name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">-->
-                                <#--</div>-->
-                            <#--</div>-->
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品名称</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
@@ -79,7 +73,7 @@
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品状态</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" value="0" name="productStatus" required id="styled_radio1" class="custom-control-input">
+                                    <input type="radio" value="0" name="productStatus" checked required id="styled_radio1" class="custom-control-input">
                                     <label class="custom-control-label" for="styled_radio1">上架</label>
                                 </div>
                                 <div class="custom-control custom-radio">
@@ -92,9 +86,9 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品类别</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <select class="form-control" name="categoryName">
+                                <select class="form-control" name="categoryType" id="categoryType" >
                                     <#list productCategoryDTOList as productCategoryDTO >
-                                        <option name="categoryName"  >
+                                        <option value="${productCategoryDTO.categoryType}" >
                                             ${productCategoryDTO.categoryName}</option>
                                     </#list>
                                 </select>

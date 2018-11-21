@@ -21,11 +21,6 @@ public interface ProductService {
      * @return
      */
     public ProductInfo findOne(String productId);
-    /**
-     * 商品列表
-     * @return
-     */
-    public List<ProductInfo> findAll();
 
     /**
      * 分页查询
@@ -53,4 +48,10 @@ public interface ProductService {
      * 查询所有的类目
      */
     public List<ProductCategoryDTO> findAllProductCategory();
+
+    /**
+     * @return
+     * 查找所有的商品信息
+     */
+    List<ProductInfo> findAll();
 }

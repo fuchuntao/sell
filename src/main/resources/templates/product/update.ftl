@@ -41,13 +41,13 @@
                 </div>
             </div>
                 <hr class="m-t-0">
-                <form  action="${basePath}/seller/product/save/${productInfoDTO.productId}" >
+                <form  action="${basePath}/seller/product/save/${productInfoDTO.productId}" method="post">
                     <div class="card-body">
                         <h4 class="card-title">productInfo</h4>
                             <div type="hidden" class="form-group row align-items-center m-b-0">
-                                <label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>
+                                <#--<label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>-->
                                 <div class="col-9 border-left p-b-10 p-t-10">
-                                    <input type="text" value="${productInfoDTO.productId}" name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">
+                                    <input type="hidden" value="${productInfoDTO.productId}" name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">
                                 </div>
                             </div>
                         <div class="form-group row align-items-center m-b-0">
@@ -92,10 +92,10 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品类别</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <select class="form-control">
+                                <select class="form-control" name="categoryType">
                                     <#list productCategoryDTOList as productCategoryDTO >
-                                        <option name="categoryType" <#if productCategoryDTO.categoryType==productInfoDTO.categoryType> selected </#if> value="${productInfoDTO.categoryType}" >
-                                            ${productCategoryDTO.categoryName}</option>
+                                        <option value="${productCategoryDTO.getCategoryType()}" <#if productCategoryDTO.getCategoryType() == productInfoDTO.getCategoryType()> selected </#if>>
+                                            ${productCategoryDTO.getCategoryName()}</option>
                                     </#list>
                                 </select>
                             </div>

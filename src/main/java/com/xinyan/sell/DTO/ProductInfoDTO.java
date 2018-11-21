@@ -13,22 +13,44 @@ import java.math.BigDecimal;
 @Data
 public class ProductInfoDTO {
 
+    /**
+     * 商品ID
+     */
     private String productId;
 
+    /**
+     * 商品名字
+     */
     private String productName;
 
+    /**
+     * 商品价格
+     */
     private BigDecimal productPrice;
 
+    /**
+     * 商品库存
+     */
     private  Integer productStock;
 
+    /**
+     * 商品状态
+     */
     private Integer productStatus;
 
+    /**
+     * 商品类目
+     */
     private Integer categoryType;
 
-    private String categoryName;
-
+    /**
+     * 商品描述
+     */
     private String productDescription;
 
+    /**
+     * 商品图片
+     */
     private String productIcon;
 
 }
