@@ -20,6 +20,7 @@
                     <h4 class="page-title">商品管理</h4>
                     <div class="d-flex align-items-center"></div>
                 </div>
+
                 <div class="col-7 align-self-center">
                     <div class="d-flex no-block justify-content-end align-items-center">
                         <nav aria-label="breadcrumb">
@@ -32,6 +33,7 @@
                         </nav>
                     </div>
                 </div>
+                <hr>
             </div>
         </div>
 

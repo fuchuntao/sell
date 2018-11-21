@@ -74,5 +74,4 @@ public interface ProductService {
      */
     public List<ProductCategoryDTO> findAllProductCategory();
 
-
 }
