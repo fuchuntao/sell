@@ -14,9 +14,13 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * ProductService业务接口单元测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductServiceTest {
+
     @Autowired
     private ProductService productService;
 
@@ -42,12 +46,18 @@ public class ProductServiceTest {
     /**
      * 分页查询测试
      */
-    @Test
-    public void findAll1() {
-        PageRequest pageRequest = new PageRequest(0, 2);
-        Page<ProductInfo> page = productService.findAll(pageRequest);
-        Assert.assertNotEquals(0, page.getTotalElements());
+//    @Test
+//    public void findAll1() {
+//        PageRequest pageRequest = new PageRequest(0, 2);
+//        Page<ProductInfo> page = productService.findAll(pageRequest);
+//
+//        Assert.assertNotEquals(0, page.getTotalElements());
+//
+//    }
 
+
+    @Test
+    public void decreaseStock() {
     }
 
     /**
@@ -57,8 +67,22 @@ public class ProductServiceTest {
     public void findByProductStatus() {
         List<ProductInfo> productInfos = productService.findByProductStatus(0);
         Assert.assertNotEquals(0, productInfos.size());
-
-
     }
 
+
+    @Test
+    public void increaseStock() {
+    }
+
+    @Test
+    public void save() {
+    }
+
+    @Test
+    public void delete() {
+    }
+
+    @Test
+    public void findAllProductCategory() {
+    }
 }

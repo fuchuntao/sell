@@ -10,6 +10,7 @@ import javax.persistence.Id;
 /**
  * Administrator
  * 2018/11/14 0014
+ * 类目实体类
  */
 @Data //自动生成set,get
 @Entity //和数据库表映射

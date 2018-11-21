@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Administrator
  * 2018/11/16 0016
- * 商品vo对象
+ * 商品列表ProductVO对象
  */
 @Data
 public class ProductVO {

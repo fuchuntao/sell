@@ -64,8 +64,11 @@
                                             <td>${orderDTO.buyerPhone}</td>
                                             <td>${orderDTO.buyerAddress}</td>
                                             <td>${orderDTO.orderAmount}</td>
-                                            <td>${orderDTO.orderStatus}</td>
-                                            <td>${orderDTO.payStatus}</td>
+                                            <#if orderDTO.orderStatus == 0><td>新订单</td></#if>
+                                            <#if orderDTO.orderStatus == 1><td>完结订单</td></#if>
+                                            <#if orderDTO.orderStatus == 2><td>取消订单</td></#if>
+                                            <#if orderDTO.payStatus == 0><td>未支付</td></#if>
+                                            <#if orderDTO.payStatus == 1><td>已支付</td></#if>
                                             <td>${orderDTO.createTime}</td>
                                             <td>
                                                 <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/order/detail?orderId=${orderDTO.orderId}">详情</a>

@@ -8,5 +8,6 @@ spring:
     show-sql: true
   freemarker:
     request-context-attribute: request
+
 server:
   context-path: /sell

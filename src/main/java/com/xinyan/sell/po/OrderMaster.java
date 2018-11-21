@@ -48,8 +48,8 @@ public class OrderMaster {
     /**订单状态 默认为下单状态*/
     private Integer orderStatus = OrderStatus.NEW.getCode();
 
-    /**支付状态 默认支付状态*/
-    private Integer payStatus = PayStatus.PAID.getCode();
+    /**支付状态 默认未支付状态*/
+    private Integer payStatus = PayStatus.WAIT.getCode();
 
     /**创建时间*/
     private Date createTime;
