@@ -2,6 +2,8 @@ package com.xinyan.sell.dto;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * Administrator
  * 2018/11/14 0014
@@ -18,5 +20,9 @@ public class ProductCategoryDTO {
 
     /** 类目编号*/
     private Integer categoryType;
+
+    /**修改时间*/
+    private Date updateTime;
+
 
 }

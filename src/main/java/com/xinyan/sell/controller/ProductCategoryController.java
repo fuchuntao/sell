@@ -8,6 +8,7 @@ import com.xinyan.sell.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -102,7 +103,8 @@ public class ProductCategoryController {
                        Map<String ,Object> map){
 
         PageRequest pageRequest = new PageRequest(page-1, size);
-        Page<ProductCategoryDTO> productCategoryDTOS = productCategoryService.pageList(pageRequest);
+        Sort desc = new Sort(Sort.Direction.DESC, "updateTime");
+        Page<ProductCategoryDTO> productCategoryDTOS = productCategoryService.pageList(pageRequest, desc);
         map.put("productCategoryDTOS",productCategoryDTOS);
 
         return "productcategory/list";

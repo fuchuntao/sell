@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
@@ -44,7 +45,8 @@ public class ProductCategoryServiceTest {
     @Test
     public void pageList() {
         PageRequest pageRequest = new PageRequest(0 ,5);
-        Page<ProductCategoryDTO> pageList = productCategoryService.pageList(pageRequest);
+        Sort desc = new Sort(Sort.Direction.DESC, "updateTime");
+        Page<ProductCategoryDTO> pageList = productCategoryService.pageList(pageRequest, desc);
         Assert.assertNotEquals("列表分页查询", pageList.getTotalElements());
     }
 

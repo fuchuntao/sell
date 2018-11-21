@@ -47,15 +47,15 @@
                     </a>
                     <ul aria-expanded="false" class="collapse  first-level">
                         <li class="sidebar-item">
-                            <a href="javascript:void(0)" class="sidebar-link">
+                            <a href="${basePath}/product/productcategory/list" class="sidebar-link">
                                 <i class="mdi mdi-book-multiple"></i>
-                                <span class="hide-menu"> 列表 </span>
+                                <span class="hide-menu" > 列表 </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="javascript:void(0)" class="sidebar-link">
+                            <a href="${basePath}/product/productcategory/add" class="sidebar-link">
                                 <i class="mdi mdi-book-plus"></i>
-                                <span class="hide-menu"> 新增 </span>
+                                <span class="hide-menu" > 新增 </span>
                             </a>
                         </li>
                     </ul>

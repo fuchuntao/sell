@@ -5,6 +5,7 @@ import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductCategory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public interface ProductCategoryService {
      *
      * @return list
      */
-    Page<ProductCategoryDTO> pageList(Pageable pageable);
+    Page<ProductCategoryDTO> pageList(Pageable pageable, Sort sort);
 
 
     /**

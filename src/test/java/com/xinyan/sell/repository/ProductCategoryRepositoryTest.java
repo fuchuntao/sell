@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
@@ -20,7 +22,7 @@ import java.util.List;
 public class ProductCategoryRepositoryTest {
 
     @Autowired
-    private  ProductCategoryRepository productCategoryRepository;
+    private ProductCategoryRepository productCategoryRepository;
 
 
     /**
@@ -29,7 +31,7 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void findOneTest() {
         ProductCategory repositoryOne = productCategoryRepository.findOne(3);
-        Assert.assertNotNull("根据id查询类目",repositoryOne);
+        Assert.assertNotNull("根据id查询类目", repositoryOne);
     }
 
     /**
@@ -42,7 +44,6 @@ public class ProductCategoryRepositoryTest {
         productCategory.setCategoryType(4);
         ProductCategory result = productCategoryRepository.save(productCategory);
         Assert.assertNotEquals(null, result);
-
 
 
     }
@@ -73,5 +74,16 @@ public class ProductCategoryRepositoryTest {
 
     }
 
-
+    /**
+     * 排序分页查询.
+     */
+    @Test
+    public void paglist() {
+        Sort desc = new Sort(Sort.Direction.DESC, "updateTime");
+        List<ProductCategory> list = productCategoryRepository.findAll(desc);
+        for (ProductCategory u : list) {
+            System.out.println(u);
+        }
+    }
 }
+

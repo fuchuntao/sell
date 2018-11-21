@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,12 +42,13 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
      * @return
      */
     @Override
-    public Page<ProductCategoryDTO> pageList(Pageable pageable) {
+    public Page<ProductCategoryDTO> pageList(Pageable pageable, Sort sort) {
+        Page<ProductCategory> productCategoryPage = repository.findAll( pageable);
 
-        Page<ProductCategory> productCategoryPage= repository.findAll(pageable);
         List<ProductCategoryDTO> page = ProductCategoryFormToProductCategoryDto.converter(productCategoryPage.getContent());
 
         Page<ProductCategoryDTO> pageList = new PageImpl<>(page, pageable, productCategoryPage.getTotalElements());
+
         return pageList;
     }
 
