@@ -1,6 +1,7 @@
 package com.xinyan.sell.service;
 
 import com.xinyan.sell.dto.ProductCategoryDTO;
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductCategory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -71,4 +72,10 @@ public interface ProductCategoryService {
      * 根据商品类目找到商品类别编号
      */
     ProductCategory findByCategoryName(String categoryName);
+
+    /**
+     * 查询列表
+     * @return
+     */
+    List<ProductCategory> findAll();
 }

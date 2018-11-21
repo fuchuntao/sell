@@ -1,5 +1,6 @@
 package com.xinyan.sell.service;
 
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductInfo;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,8 +12,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * ProductService业务接口单元测试
@@ -46,18 +45,19 @@ public class ProductServiceTest {
     /**
      * 分页查询测试
      */
-//    @Test
-//    public void findAll1() {
-//        PageRequest pageRequest = new PageRequest(0, 2);
-//        Page<ProductInfo> page = productService.findAll(pageRequest);
-//
-//        Assert.assertNotEquals(0, page.getTotalElements());
-//
-//    }
+    @Test
+    public void findAll1() {
+        PageRequest pageRequest = new PageRequest(0, 2);
+        Page<ProductInfoDTO> productInfoDTOPage = productService.findAll(pageRequest);
+
+        Assert.assertNotEquals(0, productInfoDTOPage.getTotalElements());
+
+    }
 
 
     @Test
     public void decreaseStock() {
+
     }
 
     /**

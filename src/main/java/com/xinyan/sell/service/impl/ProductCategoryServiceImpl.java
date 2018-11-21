@@ -2,6 +2,7 @@ package com.xinyan.sell.service.impl;
 
 import com.xinyan.sell.converter.ProductCategoryFormToProductCategoryDto;
 import com.xinyan.sell.dto.ProductCategoryDTO;
+import com.xinyan.sell.dto.ProductInfoDTO;
 import com.xinyan.sell.po.ProductCategory;
 import com.xinyan.sell.repository.ProductCategoryRepository;
 import com.xinyan.sell.service.ProductCategoryService;
@@ -60,6 +61,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return repository.findByCategoryTypeIn(categoryType);
     }
 
+
     @Override
     public ProductCategory findByCategoryType(Integer categoryType) {
         return repository.findOneByCategoryType(categoryType);
@@ -68,6 +70,15 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     @Override
     public ProductCategory findByCategoryName(String categoryName) {
         return repository.findOneByCategoryName(categoryName);
+    }
+
+    /**
+     * 查询列表
+     * @return
+     */
+    @Override
+    public List<ProductCategory> findAll() {
+        return repository.findAll();
     }
 
 

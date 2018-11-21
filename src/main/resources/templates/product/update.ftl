@@ -41,13 +41,13 @@
                 </div>
             </div>
                 <hr class="m-t-0">
-                <form  action="${basePath}/seller/product/save/${productInfoDTO.productId}" >
+                <form  action="${basePath}/seller/product/save/${productInfoDTO.productId}" method="post">
                     <div class="card-body">
                         <h4 class="card-title">productInfo</h4>
                             <div type="hidden" class="form-group row align-items-center m-b-0">
-                                <label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>
+                                <#--<label  for="inputEmail3" class="col-3 text-right control-label col-form-label">商品ID</label>-->
                                 <div class="col-9 border-left p-b-10 p-t-10">
-                                    <input type="text" value="${productInfoDTO.productId}" name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">
+                                    <input type="hidden" value="${productInfoDTO.productId}" name="productId" class="form-control" id="inputEmail3" placeholder="商品ID">
                                 </div>
                             </div>
                         <div class="form-group row align-items-center m-b-0">
@@ -79,12 +79,12 @@
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品状态</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" <#if productInfoDTO.productStatus==0>checked</#if> class="custom-control-input" value="0" id="customControlValidation2" name="radio-stacked" required>
-                                    <label  class="custom-control-label" >上架</label>
+                                    <input type="radio" value="0" <#if productInfoDTO.productStatus==0>checked="checked"</#if> name="productStatus" required id="styled_radio1" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio1">上架</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" <#if productInfoDTO.productStatus==1>checked</#if> class="custom-control-input" value="1" id="customControlValidation3" name="radio-stacked" required>
-                                    <label class="custom-control-label" >下架</label>
+                                    <input type="radio" value="1" <#if productInfoDTO.productStatus==1>checked="checked"</#if> name="productStatus" id="styled_radio2" class="custom-control-input">
+                                    <label class="custom-control-label" for="styled_radio2">下架</label>
                                 </div>
                             </div>
                         </div>
@@ -92,10 +92,10 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品类别</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <select class="form-control">
+                                <select class="form-control" name="categoryType">
                                     <#list productCategoryDTOList as productCategoryDTO >
-                                        <option name="categoryName" <#if productCategoryDTO.categoryType == productInfoDTO.categoryType> value="productCategoryDTO.categoryType"</#if> >
-                                            ${productInfoDTO.categoryName}</option>
+                                        <option value="${productCategoryDTO.getCategoryType()}" <#if productCategoryDTO.getCategoryType() == productInfoDTO.getCategoryType()> selected </#if>>
+                                            ${productCategoryDTO.getCategoryName()}</option>
                                     </#list>
                                 </select>
                             </div>
@@ -104,7 +104,7 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品照片</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" value="${productInfoDTO.productIcon}" class="form-control" id="inputEmail3" placeholder="商品照片地址">
+                                <input type="text" name="productIcon" value="${productInfoDTO.productIcon}" class="form-control" id="inputEmail3" placeholder="商品照片地址">
                             </div>
                         </div>
                         <div class="card-body">
