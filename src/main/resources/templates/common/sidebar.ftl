@@ -26,13 +26,13 @@
                     </a>
                     <ul aria-expanded="false" class="collapse  first-level">
                         <li class="sidebar-item">
-                            <a href="javascript:void(0)" class="sidebar-link">
+                            <a href="${basePath}/seller/product/list" class="sidebar-link">
                                 <i class="icon-Record"></i>
                                 <span class="hide-menu"> 列表 </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="javascript:void(0)" class="sidebar-link">
+                            <a href="${basePath}/seller/product/toAdd" class="sidebar-link">
                                 <i class="icon-Record"></i>
                                 <span class="hide-menu"> 新增 </span>
                             </a>

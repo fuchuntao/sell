@@ -64,27 +64,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<ProductInfoDTO> findAll(Pageable pageable) {
         //创建商品信息分页对象
-     Page<ProductInfo> productInfoPage=productRepository.findAll(pageable);
-
-     //获取所有的商品类目
-        List<ProductCategory> productRepositoryList=productCategoryRepository.findAll();
-
-
+        Page<ProductInfo> productInfoPage = productRepository.findAll(pageable);
         //将商品信息分页对象转换为商品信息DTO对象（list）
-     List<ProductInfoDTO> productInfoDTOList=ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
-        for (ProductInfoDTO productInfoDTO:productInfoDTOList){
-//            for (ProductCategory productCategory:productRepositoryList){
-                for (ProductInfo productInfo:productInfoPage){
-                    ProductCategory productCategory1=productCategoryRepository.findOneByCategoryType(productInfo.getCategoryType());
-                    productInfoDTO.setCategoryName(productCategory1.getCategoryName());
-//                }
-            }
-
-        }
-
-
+        List<ProductInfoDTO> productInfoDTOList = ProductInfoToProductInfoDTO.converter(productInfoPage.getContent());
         //将list的DTO对象封装为分页DTO对象
-     Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
+        Page<ProductInfoDTO> productInfoDTOPage = new PageImpl<>(productInfoDTOList, pageable, productInfoPage.getTotalElements());
 
         return productInfoDTOPage;
     }
@@ -180,9 +164,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductCategoryDTO> findAllProductCategory() {
         List<ProductCategory> productCategoryRepositoryAll = productCategoryRepository.findAll();
-        List<ProductCategoryDTO> converter = ProductCategoryToProductCategoryDTO.converter(productCategoryRepositoryAll);
-        return converter;
+        List<ProductCategoryDTO> productCategoryDTOList = ProductCategoryToProductCategoryDTO.converter(productCategoryRepositoryAll);
+        return productCategoryDTOList;
     }
+
 
 
 }

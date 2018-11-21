@@ -17,7 +17,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-5 align-self-center">
-                    <h4 class="page-title">订单管理</h4>
+                    <h4 class="page-title">商品管理</h4>
                     <div class="d-flex align-items-center"></div>
                 </div>
                 <div class="col-7 align-self-center">
@@ -41,7 +41,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">订单列表</h4>
+                            <h4 class="card-title">商品列表</h4>
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
                                     <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/toAdd">添加</a>
@@ -68,7 +68,14 @@
                                                  <#elseif productInfoDTO.productStatus == 1>下架
                                                  </#if>
                                              </td>
-                                             <td>${productInfoDTO.categoryName}</td>
+
+
+                                             <td>
+                                                  <#list productCategoryList as productCategory>
+                                                 <#if productCategory.categoryType==productInfoDTO.categoryType>${productCategory.categoryName}</#if>
+                                                  </#list>
+                                             </td>
+
                                              <td>
                                                   <#if productInfoDTO.productStatus == 0>
                                                    <a class="btn btn-sm btn-outline-info" href="${basePath}/seller/product/updateStatusDown?productId=${productInfoDTO.productId}">下架</a>

@@ -73,4 +73,6 @@ public interface ProductService {
      * 查询所有的类目
      */
     public List<ProductCategoryDTO> findAllProductCategory();
+
+
 }
