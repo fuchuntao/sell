@@ -1,6 +1,9 @@
 package com.xinyan.sell.repository;
 
 import com.xinyan.sell.po.ProductCategory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -18,19 +21,22 @@ public interface ProductCategoryRepository extends JpaRepository<ProductCategory
      * @param categoryTypeList
      * @return
      */
-    public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
     /**
      * @param categoryType
      * @return
      * 根据商品类目查询单个商品
      */
-    public ProductCategory findOneByCategoryType(Integer categoryType);
+     ProductCategory findOneByCategoryType(Integer categoryType);
 
     /**
      * 根据商品类目名查询单个商品
      * @param categoryName
      * @return
      */
-    public ProductCategory findOneByCategoryName(String categoryName);
+    ProductCategory findOneByCategoryName(String categoryName);
+
+    //List<ProductCategory> findAll(Pageable pageable, Sort sort);
+
 }

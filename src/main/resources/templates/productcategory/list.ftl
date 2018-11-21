@@ -118,5 +118,8 @@
 <#include "../common/layout.ftl">
 
 <#include "../common/js.ftl">
+<script>
+
+</script>
 </body>
 </html>

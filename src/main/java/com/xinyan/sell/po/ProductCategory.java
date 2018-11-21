@@ -6,6 +6,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * Administrator
@@ -27,5 +28,8 @@ public class ProductCategory {
 
     /** 类目编号*/
     private Integer categoryType;
+
+    /**修改时间*/
+    private Date updateTime;
 
 }
