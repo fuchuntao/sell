@@ -14,6 +14,7 @@ import com.xinyan.sell.repository.OrderDetailRepository;
 import com.xinyan.sell.repository.OrderMasterRepository;
 import com.xinyan.sell.repository.ProductRepository;
 import com.xinyan.sell.service.OrderService;
+import com.xinyan.sell.service.PayService;
 import com.xinyan.sell.service.ProductService;
 import com.xinyan.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -50,6 +51,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private PayService payService;
 
     //===========================买家端===================================
     /**
@@ -185,6 +189,9 @@ public class OrderServiceImpl implements OrderService {
                 .collect(Collectors.toList());
         productService.increaseStock(cartDTOList);
         //是否支付退款
+        if(orderDTO.getPayStatus().equals(PayStatus.PAID)){
+            payService.refund(orderDTO);
+        }
 
         return orderDTO;
     }
