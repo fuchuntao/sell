@@ -57,21 +57,7 @@ public interface ProductCategoryService {
      */
     void delete(Integer id);
 
-    //===================卖家端==========================
-    /**
-     * @param categoryType
-     * @return
-     * 通过商品类型查找类目
-     */
-    ProductCategory findByCategoryType(Integer categoryType);
-
-
-    /**
-     * @param categoryName
-     * @return
-     * 根据商品类目找到商品类别编号
-     */
-    ProductCategory findByCategoryName(String categoryName);
+    //===================卖家端=========================
 
     /**
      * 查询列表

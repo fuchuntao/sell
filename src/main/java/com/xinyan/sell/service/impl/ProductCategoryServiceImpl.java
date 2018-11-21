@@ -50,7 +50,6 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return pageList;
     }
 
-
     /**
      * 多个查询
      * @param categoryType
@@ -61,17 +60,6 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return repository.findByCategoryTypeIn(categoryType);
     }
 
-
-    @Override
-    public ProductCategory findByCategoryType(Integer categoryType) {
-        return repository.findOneByCategoryType(categoryType);
-    }
-
-    @Override
-    public ProductCategory findByCategoryName(String categoryName) {
-        return repository.findOneByCategoryName(categoryName);
-    }
-
     /**
      * 查询列表
      * @return
@@ -80,7 +68,6 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     public List<ProductCategory> findAll() {
         return repository.findAll();
     }
-
 
     /**
      * 添加
