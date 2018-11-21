@@ -12,6 +12,7 @@ public enum PayStatus {
     WAIT(0, "未支付"),
     PAID(1, "已支付")
 
+
     ;
 
     private Integer code;
