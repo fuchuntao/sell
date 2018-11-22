@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -38,7 +40,7 @@ public class WechatController {
     @GetMapping("/authorize")
     public String authorize(@RequestParam("returnUrl")String returnUrl){
         //构造网页授权url，然后构成超链接让用户点击重定向的url地址
-        String url = "http://*******/sell/wechat/userInfo";
+        String url = "http://q227z05133.iok.la:42371/sell/wechat/userInfo";
 
         //redirectUrl: 授权后重定向的回调链接地址
         //注意：跳转回调redirect_uri，应当使用https链接来确保授权code的安全性。
@@ -63,7 +65,9 @@ public class WechatController {
      */
 
     @GetMapping("/userInfo")
-    public String userInfo(@RequestParam("code") String code,@RequestParam("state") String returnUrl){
+    public String userInfo(@RequestParam("code") String code,
+                           @RequestParam("state") String returnUrl,
+                           HttpServletResponse response){
 
         WxMpUser wxMpUser = null;
         try {
@@ -78,7 +82,10 @@ public class WechatController {
             e.getError().getErrorMsg());
         }
             String openId = wxMpUser.getOpenId();
-            return  "redirect:" + returnUrl + "?openid=" + openId;
+        Cookie openid = new Cookie("openid", openId);
+        response.addCookie(openid);
+        System.out.println("openid:" + openId);
+            return  "redirect:" + "http://q227z05133.iok.la:42371/#/?openid=" + openId;
     }
 
 }

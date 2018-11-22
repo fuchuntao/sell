@@ -86,7 +86,7 @@ public class PayController {
         RefundResponse refundResponse = payService.refund(orderDTO);
 
         //Freemarker: templates/pay/create.ftl
-        ModelAndView modelAndView=new ModelAndView("pay/refund");
+        ModelAndView modelAndView = new ModelAndView("pay/refund");
         modelAndView.addObject("refundResponse",refundResponse);
         modelAndView.addObject("returnUrl",returnUrl);
 
