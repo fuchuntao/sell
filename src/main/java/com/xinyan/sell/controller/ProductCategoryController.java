@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 /**
+ * 卖家类目Controller
  * 用户 : 莫言
  * 时间 : 2018/11/19 9:32
  * 类名 : productCategoryController
@@ -27,19 +28,15 @@ import java.util.Map;
 public class ProductCategoryController {
 
 
-    /**
-     * The Product category service.
-     */
     @Autowired
     private ProductCategoryService productCategoryService;
 
 
     /**
-     * Update 更新.
-     *
-     * @param categoryId the category id
-     * @param map        the map
-     * @return the string
+     * 修改类目
+     * @param categoryId
+     * @param map
+     * @return
      */
     @GetMapping("/update/{categoryId}")
     public String update(@PathVariable("categoryId") Integer categoryId, Map<String, Object> map){
@@ -49,53 +46,48 @@ public class ProductCategoryController {
     }
 
     /**
-     * Add 添加跳转页面.
-     *
-     * @return the string
+     * 去添加类目页面
+     * @return
      */
     @GetMapping("/add")
     public String add(){
-
         return "productcategory/add";
     }
 
     /**
-     * Save 添加保存.
-     *
-     * @param productCategoryForm the product category form
-     * @return the string
+     * 添加类目
+     * @param productCategoryForm
+     * @return
      */
     @PostMapping("/save")
     public String save(ProductCategoryForm productCategoryForm){
         ProductCategoryDTO productCategoryDTO = ProductCategoryFormToProductCategoryDto.converter(productCategoryForm);
         productCategoryService.save(productCategoryDTO);
-
         return "redirect:/product/productcategory/list";
     }
 
 
     /**
-     * Update 更新.
-     *
-     * @param categoryId          the category id
-     * @param productCategoryForm the product category form
-     * @return the string
+     * 修改类目
+     * @param categoryId
+     * @param productCategoryForm
+     * @return
      */
     @PostMapping("/save/{categoryId}")
     public String update(@PathVariable("categoryId") Integer categoryId, ProductCategoryForm productCategoryForm) {
         ProductCategoryDTO productCategoryDTO = ProductCategoryFormToProductCategoryDto.converter(productCategoryForm);
         productCategoryDTO.setCategoryId(categoryId);
         productCategoryService.save(productCategoryDTO);
-
-
         return "redirect:/product/productcategory/list";
     }
 
 
     /**
-     * 类目列表.
-     *
-     * @return map集合
+     * 类目列表
+     * @param page
+     * @param size
+     * @param map
+     * @return
      */
     @GetMapping("/list")
     public String list(@RequestParam(value = "page",required = false,defaultValue = "1") Integer page,
@@ -106,17 +98,16 @@ public class ProductCategoryController {
         Sort desc = new Sort(Sort.Direction.DESC, "updateTime");
         Page<ProductCategoryDTO> productCategoryDTOS = productCategoryService.pageList(pageRequest, desc);
         map.put("productCategoryDTOS",productCategoryDTOS);
-
         return "productcategory/list";
     }
 
     /**
-     * 删除.
-     *
-     * @return the product category vo
+     * 删除类目
+     * @param categoryId
+     * @return
      */
     @GetMapping("/delete/{categoryId}")
-    public String findNo(@PathVariable("categoryId") Integer categoryId){
+    public String delete(@PathVariable("categoryId") Integer categoryId){
         productCategoryService.delete(categoryId);
         return "redirect:/product/productcategory/list";
     }

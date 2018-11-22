@@ -59,13 +59,13 @@ public interface ProductService {
      * @param productInfo
      * 保存或更新商品信息
      */
-    void save(ProductInfo productInfo);
+    public void save(ProductInfo productInfo);
 
     /**
      * @param productInfo
      * 删除商品信息
      */
-    void delete(ProductInfo productInfo);
+    public void delete(ProductInfo productInfo);
 
 
     /**

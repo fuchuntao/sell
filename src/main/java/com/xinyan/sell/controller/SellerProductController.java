@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @RequestMapping("/seller/product")
 @Controller
-public class SellerProductController  {
+public class SellerProductController{
 
 
     @Autowired
@@ -75,7 +75,7 @@ public class SellerProductController  {
         //保存商品信息
         productService.save(productInfo);
 
-        return "redirect:list";
+        return "redirect: /seller/product/list";
     }
 
     /**
@@ -92,7 +92,7 @@ public class SellerProductController  {
         //保存商品信息
         productService.save(productInfo);
 
-        return "redirect:list";
+        return "redirect: /seller/product/list";
     }
 
     /**
@@ -107,7 +107,7 @@ public class SellerProductController  {
         //删除商品
         productService.delete(productInfo);
 
-        return "redirect:list";
+        return "redirect: /seller/product/list";
     }
 
     /**
@@ -149,7 +149,11 @@ public class SellerProductController  {
         return "redirect:/seller/product/list";
     }
 
-    //去添加商品
+    /**
+     * 去添加商品页面
+     * @param model
+     * @return
+     */
     @RequestMapping("/toAdd")
     public String toAdd(Model model) {
         //查找所有的商品类目
@@ -159,6 +163,11 @@ public class SellerProductController  {
         return "product/add";
     }
 
+    /**
+     * 添加商品
+     * @param productInfoDTO
+     * @return
+     */
     @PostMapping("/add")
     public String add(ProductInfoDTO productInfoDTO) {
         //将DTO对象转换为productInfo对象
@@ -167,6 +176,6 @@ public class SellerProductController  {
         productInfo.setProductId(KeyUtil.generateUniqueKey());
         //增加商品
         productService.save(productInfo);
-        return "redirect:list";
+        return "redirect:/seller/product/list";
     }
 }
