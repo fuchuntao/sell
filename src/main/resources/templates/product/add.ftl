@@ -47,25 +47,25 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品名称</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text"  name="productName" class="form-control" id="inputEmail3" placeholder="商品名称">
+                                <input type="text"  name="productName" class="form-control" required  placeholder="商品名称">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品价格</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text"  name="productPrice" class="form-control" id="inputEmail3" placeholder="商品价格">
+                                <input type="number" required  name="productPrice" class="form-control" id="inputEmail3" placeholder="商品价格">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品库存</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text"  name="productStock" class="form-control" id="inputEmail3" placeholder="商品库存">
+                                <input type="number" required  name="productStock" class="form-control" id="inputEmail3" placeholder="商品库存">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品描述</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text"  name="productDescription" class="form-control" id="inputEmail3" placeholder="商品描述">
+                                <input type="text"  name="productDescription" class="form-control" required data-validation-required-message="此处必须填写，不能为空" placeholder="商品描述">
                             </div>
                         </div>
 
@@ -98,8 +98,10 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品照片</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" name="productIcon" class="form-control" id="inputEmail3" placeholder="商品照片地址">
+                                <input type="url"  name="productIcon" class="form-control" required placeholder="输入照片URL"/>
                             </div>
+                        </div>
+
                         </div>
                         <div class="card-body">
                         <div class="form-group m-b-0 text-right">
