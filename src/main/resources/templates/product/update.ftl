@@ -53,25 +53,25 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品名称</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" value="${productInfoDTO.productName}" name="productName" class="form-control" id="inputEmail3" placeholder="商品名称">
+                                <input type="text" value="${productInfoDTO.productName}" required name="productName" class="form-control" id="inputEmail3" placeholder="商品名称">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品价格</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" value="${productInfoDTO.productPrice}" name="productPrice" class="form-control" id="inputEmail3" placeholder="商品价格">
+                                <input type="text" value="${productInfoDTO.productPrice}" required name="productPrice" class="form-control" id="inputEmail3" placeholder="商品价格">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品库存</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" value="${productInfoDTO.productStock}" name="productStock" class="form-control" id="inputEmail3" placeholder="商品库存">
+                                <input type="number" value="${productInfoDTO.productStock}" required  name="productStock" class="form-control" id="inputEmail3" placeholder="商品库存">
                             </div>
                         </div>
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品描述</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" value="${productInfoDTO.productDescription}" name="productDescription" class="form-control" id="inputEmail3" placeholder="商品描述">
+                                <input type="text" value="${productInfoDTO.productDescription}" required name="productDescription" class="form-control" id="inputEmail3" placeholder="商品描述">
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@
                         <div class="form-group row align-items-center m-b-0">
                             <label for="inputEmail3" class="col-3 text-right control-label col-form-label">商品照片</label>
                             <div class="col-9 border-left p-b-10 p-t-10">
-                                <input type="text" name="productIcon" value="${productInfoDTO.productIcon}" class="form-control" id="inputEmail3" placeholder="商品照片地址">
+                                <input type="url" name="productIcon"  required class="form-control"  placeholder="${productInfoDTO.productIcon}" value="${productInfoDTO.productIcon}">
                             </div>
                         </div>
                         <div class="card-body">
