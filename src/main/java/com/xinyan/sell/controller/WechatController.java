@@ -88,13 +88,13 @@ public class WechatController {
             WxMpOAuth2AccessToken wxMpOAuth2AccessToken =wxMpService.oauth2getAccessToken(code);
             //获取用户基本信息
             wxMpUser = wxMpService.oauth2getUserInfo(wxMpOAuth2AccessToken, null);
-
+            openId = wxMpUser.getOpenId();
         } catch (WxErrorException e) {
             log.error("【微信网页授权】{}", e);
             throw new SellException(ResultStatus.WECHAT_MP_AUTHORIZE_ERROR.getCode(),
             e.getError().getErrorMsg());
         }
-        openId = wxMpUser.getOpenId();
+
 //        Cookie openid = new Cookie("openid", openId);
 //        response.addCookie(openid);
         System.out.println("openid:" + openId);
