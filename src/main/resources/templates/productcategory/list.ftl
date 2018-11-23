@@ -59,8 +59,6 @@
                                             <td>${productCategoryDTOS.categoryType}</td>
                                             <td>
                                                 <a class="btn btn-sm btn-outline-info" href="${basePath}/product/productcategory/update/${productCategoryDTOS.categoryId}" ">修改</a>
-                                                <a class="btn btn-sm btn-outline-danger" id="delete" onclick="deleteProduct(${productCategoryDTOS.categoryId})">删除</a>
-                                                <a class="btn btn-sm btn-outline-danger" href="${basePath}/product/productcategory/add" ">添加</a>
                                             </td>
                                         </tr>
                                         </#list>
@@ -118,16 +116,6 @@
 <#include "../common/layout.ftl">
 
 <#include "../common/js.ftl">
-<script>
-    //删除
-    function deleteProduct(id) {
-        if(confirm("确定要删除吗？")) {
-            window.location="${basePath}/product/productcategory/delete/" +id;
-            <#--$("#delete").attr("href", "${basePath}/product/productcategory/delete/" +id);-->
-            return true;
-        }
-        return false;
-    }
-</script>
+
 </body>
 </html>
