@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -38,10 +39,20 @@ public class WechatController {
      * @return
      */
     @GetMapping("/authorize")
-    public String authorize(@RequestParam("returnUrl")String returnUrl){
+    public String authorize(@RequestParam("returnUrl")String returnUrl, HttpServletRequest request){
         //构造网页授权url，然后构成超链接让用户点击重定向的url地址
         String url = "http://q227z05133.iok.la:42371/sell/wechat/userInfo";
-
+//        Cookie[] cookies = request.getCookies();
+//        if(cookies != null) {
+//            for(Cookie cookie : cookies) {
+//                System.out.println(cookie.getName());
+//                if(cookie.getName().equals("openid")) {
+//                return "redirect:" + "http://q227z05133.iok.la:42371/#/?openid=" + cookie.getValue();
+//                }
+//            }
+//
+//
+//        }
         //redirectUrl: 授权后重定向的回调链接地址
         //注意：跳转回调redirect_uri，应当使用https链接来确保授权code的安全性。
             String redirectUrl = null;
@@ -70,20 +81,22 @@ public class WechatController {
                            HttpServletResponse response){
 
         WxMpUser wxMpUser = null;
+        String openId = null;
         try {
             //当用户同意授权后，会回调所设置的url并把authorization code传过来，
             // 然后用这个code获得access token，其中也包含用户的openid等信息
             WxMpOAuth2AccessToken wxMpOAuth2AccessToken =wxMpService.oauth2getAccessToken(code);
             //获取用户基本信息
             wxMpUser = wxMpService.oauth2getUserInfo(wxMpOAuth2AccessToken, null);
+
         } catch (WxErrorException e) {
             log.error("【微信网页授权】{}", e);
             throw new SellException(ResultStatus.WECHAT_MP_AUTHORIZE_ERROR.getCode(),
             e.getError().getErrorMsg());
         }
-            String openId = wxMpUser.getOpenId();
-        Cookie openid = new Cookie("openid", openId);
-        response.addCookie(openid);
+        openId = wxMpUser.getOpenId();
+//        Cookie openid = new Cookie("openid", openId);
+//        response.addCookie(openid);
         System.out.println("openid:" + openId);
             return  "redirect:" + "http://q227z05133.iok.la:42371/#/?openid=" + openId;
     }

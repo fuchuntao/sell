@@ -59,10 +59,10 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <input type="text" name="categoryName" value="${productCategory.categoryName}"/>
+                                                            <input type="text" required name="categoryName" value="${productCategory.categoryName}"/>
                                                         </td>
                                                         <td>
-                                                            <input type="text" name="categoryType" value="${productCategory.categoryType}"/>
+                                                            <input type="text" required name="categoryType" value="${productCategory.categoryType}"/>
                                                         </td>
                                                     </tr>
                                                 </tbody>

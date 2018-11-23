@@ -60,10 +60,10 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <input type="text" name="categoryName" />
+                                                            <input type="text" required name="categoryName" />
                                                         </td>
                                                         <td>
-                                                            <input type="text" name="categoryType" />
+                                                            <input type="text" required name="categoryType" />
                                                         </td>
                                                     </tr>
                                                 </tbody>
